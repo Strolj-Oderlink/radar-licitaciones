@@ -79,12 +79,18 @@ document.querySelectorAll('button.f').forEach(b=>b.onclick=()=>{
 
 def esc(x): return html.escape(str(x or ''))
 
+
+def num(v, dec=0):
+    """Formato chileno: miles con punto, decimales con coma."""
+    txt = f"{v:,.{dec}f}"
+    return txt.replace(',', '\x00').replace('.', ',').replace('\x00', '.')
+
 def build(corrida, filas, bajo, ruta):
     altas=[r for r in filas if r['Prioridad']=='ALTA']
     nuevas=[r for r in filas if r.get('Novedad')=='NUEVA']
     urg=[r for r in filas if r['Dias al cierre'] is not None and r['Dias al cierre']<=7]
     kpis=[(len(filas),'Matches vigentes'),(len(altas),'Prioridad alta'),(len(nuevas),'Nuevas'),
-          (len(urg),'Cierran ≤ 7 días'),(f"{corrida['activas']:,}".replace(',','.'),'Universo barrido')]
+          (len(urg),'Cierran ≤ 7 días'),(num(corrida['activas']),'Universo barrido')]
     K=''.join(f'<div class="kpi{" nuevo" if k=="Nuevas" and int(v)>0 else ""}"><b>{v}</b><span>{k}</span></div>'
               for v,k in kpis)
 
@@ -131,14 +137,16 @@ def build(corrida, filas, bajo, ruta):
            f'<div class="tw"><table><tr><th>Score</th><th>Licitación</th><th>Organismo</th><th>Región</th>'
            f'<th>Monto</th><th>Por qué no entró</th></tr>{rows}</table></div>')
 
-    sub=(f"Corrida {corrida['generado'][:16].replace('T',' ')} · UF {corrida['uf']:,.2f} · "
-         f"{corrida['candidatos']} candidatos analizados en detalle sobre {corrida['activas']:,} licitaciones activas".replace(',','.'))
+    sub=(f"Corrida {corrida['generado'][:16].replace('T',' ')} · UF {num(corrida['uf'],2)} · "
+         f"{corrida['candidatos']} candidatos analizados en detalle sobre "
+         f"{num(corrida['activas'])} licitaciones activas")
     foot=("<strong>Marca de novedad:</strong> se considera NUEVA la licitación que no aparecía en "
           "ninguna corrida anterior — la comparación es contra el histórico acumulado, no contra la "
           "fecha de publicación del aviso. Las tarjetas con banda ámbar ya estaban en el radar pero "
           "cambiaron de estado, fecha de cierre o monto.<br><br>"
           "Fuente: API oficial <code>api.mercadopublico.cl</code> (endpoint licitaciones activas) + valor UF de mindicador.cl. "
-          f"Umbrales: RM desde UF {corrida['parametros']['min_rm']:,.0f}, resto del país desde UF {corrida['parametros']['min_nacional']:,.0f}, "
+          f"Umbrales: RM desde UF {num(corrida['parametros']['min_rm'])}, resto del país desde UF "
+          f"{num(corrida['parametros']['min_nacional'])}, "
           f"mínimo {corrida['parametros']['min_dias']} día(s) al cierre. Las licitaciones sin monto publicado no se descartan. "
           "El score combina términos núcleo del negocio inmobiliario, objeto de la licitación y categoría UNSPSC del ítem.")
     out=(TPL.replace('__SUB__',sub).replace('__KPIS__',K).replace('__FILTROS__',F)

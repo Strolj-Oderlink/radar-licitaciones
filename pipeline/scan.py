@@ -106,9 +106,10 @@ def aplica_umbral(uf_val, region, min_rm, min_nac):
     es_rm = any(r in norm(region) for r in REGIONES_RM)
     if uf_val is None:
         return True, ('RM' if es_rm else 'Nacional') + ' / monto no publicado'
+    def n(v): return f"{v:,.0f}".replace(',', '.')
     if es_rm:
-        return uf_val >= min_rm, f"RM, UF {uf_val:,.0f} (umbral {min_rm})"
-    return uf_val >= min_nac, f"Nacional, UF {uf_val:,.0f} (umbral {min_nac})"
+        return uf_val >= min_rm, f"RM, UF {n(uf_val)} (umbral UF {n(min_rm)})"
+    return uf_val >= min_nac, f"Nacional, UF {n(uf_val)} (umbral UF {n(min_nac)})"
 
 def asignar_entidad(det, uf_val, score):
     """Gamma y Realsa venden lo mismo; Gamma tiene historia verificable.
