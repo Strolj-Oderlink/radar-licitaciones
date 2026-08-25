@@ -1,8 +1,8 @@
 {
- "generado": "2026-08-25T17:38:29",
+ "generado": "2026-08-25T17:49:40",
  "uf": 40865.87,
- "activas": 4508,
- "candidatos": 336,
+ "activas": 4511,
+ "candidatos": 337,
  "matches": 10,
  "parametros": {
   "min_rm": 500.0,
@@ -1682,6 +1682,12 @@
    "nombre": "MANTENIMIENTO PREVENTIVO Y CORRECTIVO DE GRUPOS ELECTRÓGENO EDIFICIO CAA Y PSIQUIATRÍA",
    "score": 8,
    "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
+  },
+  {
+   "codigo": "4086-43-LE26",
+   "nombre": "SERVICIO ARRIENDO DE EXCAVADORA",
+   "score": 0,
+   "motivo": "score 0 < 30"
   },
   {
    "codigo": "4099-22-LP26",
