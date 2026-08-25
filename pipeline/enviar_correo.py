@@ -78,9 +78,9 @@ def main():
         r = json.loads(urllib.request.urlopen(req, timeout=60).read())
         print(f"[correo] enviado a {DESTINO} · id {r.get('id')} · adjunto {os.path.basename(xlsx)}")
     except urllib.error.HTTPError as e:
-        cuerpo = e.read().decode('utf-8', 'ignore')[:400]
-        print(f"[correo] error {e.code}: {cuerpo}")
-        if e.code == 403 and '1010' in cuerpo:
+        detalle = e.read().decode('utf-8', 'ignore')[:400]
+        print(f"[correo] error {e.code}: {detalle}")
+        if e.code == 403 and '1010' in detalle:
             print("[correo] Bloqueo de Cloudflare por el User-Agent del cliente.")
         elif e.code == 403:
             print("[correo] Resend rechazo el envio. Revisa que el dominio del remitente "
