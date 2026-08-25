@@ -10,7 +10,8 @@ def enviar(texto):
     url = ('https://api.callmebot.com/whatsapp.php?'
            + urllib.parse.urlencode({'phone': phone, 'text': texto, 'apikey': apikey}))
     try:
-        r = urllib.request.urlopen(url, timeout=45).read().decode('utf-8', 'ignore')
+        req = urllib.request.Request(url, headers={'User-Agent': 'radar-licitaciones/1.0'})
+        r = urllib.request.urlopen(req, timeout=45).read().decode('utf-8', 'ignore')
         print('[notificar] respuesta CallMeBot:', r[:200])
         return True
     except Exception as e:

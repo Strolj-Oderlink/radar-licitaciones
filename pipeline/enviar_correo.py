@@ -67,14 +67,26 @@ def main():
             'content': base64.b64encode(open(xlsx, 'rb').read()).decode(),
         }],
     }
+    # El User-Agent NO es opcional: Resend esta detras de Cloudflare, que bloquea el
+    # cliente por defecto de urllib ('Python-urllib/3.x') con 403 y "error code: 1010".
     req = urllib.request.Request(API, data=json.dumps(payload).encode(),
                                  headers={'Authorization': f'Bearer {key}',
-                                          'Content-Type': 'application/json'})
+                                          'Content-Type': 'application/json',
+                                          'Accept': 'application/json',
+                                          'User-Agent': 'radar-licitaciones/1.0'})
     try:
         r = json.loads(urllib.request.urlopen(req, timeout=60).read())
         print(f"[correo] enviado a {DESTINO} · id {r.get('id')} · adjunto {os.path.basename(xlsx)}")
     except urllib.error.HTTPError as e:
-        print(f"[correo] error {e.code}: {e.read().decode('utf-8','ignore')[:400]}")
+        cuerpo = e.read().decode('utf-8', 'ignore')[:400]
+        print(f"[correo] error {e.code}: {cuerpo}")
+        if e.code == 403 and '1010' in cuerpo:
+            print("[correo] Bloqueo de Cloudflare por el User-Agent del cliente.")
+        elif e.code == 403:
+            print("[correo] Resend rechazo el envio. Revisa que el dominio del remitente "
+                  f"({REMITENTE}) sea uno verificado en Domains.")
+        elif e.code == 401:
+            print("[correo] La RESEND_API_KEY no es valida o no tiene permiso de envio.")
         raise
     except Exception as e:
         print(f"[correo] fallo: {str(e)[:300]}"); raise

@@ -41,18 +41,34 @@ jobs:
           FORZAR: ${{ github.event_name == 'workflow_dispatch' && inputs.forzar }}
         run: python pipeline/ventana.py
 
+      - name: Diagnostico de configuracion
+        run: |
+          echo "Credenciales cargadas (solo indica si existen, nunca su valor):"
+          [ -n "${{ secrets.MP_TICKET }}" ]        && echo "  MP_TICKET.......... si (propio)" || echo "  MP_TICKET.......... NO -> se usa el ticket publico, con rate limit agresivo"
+          [ -n "${{ secrets.CALLMEBOT_APIKEY }}" ] && echo "  CALLMEBOT_APIKEY... si" || echo "  CALLMEBOT_APIKEY... NO -> no habra aviso por WhatsApp"
+          [ -n "${{ secrets.WHATSAPP_PHONE }}" ]   && echo "  WHATSAPP_PHONE..... si" || echo "  WHATSAPP_PHONE..... NO"
+          [ -n "${{ secrets.RESEND_API_KEY }}" ]   && echo "  RESEND_API_KEY..... si" || echo "  RESEND_API_KEY..... NO -> no se enviara el Excel por correo"
+          echo "  PAGES_URL.......... ${{ vars.PAGES_URL || '(sin variable, se usa el valor por defecto)' }}"
+
       - name: Barrer Mercado Publico
         if: steps.ventana.outputs.correr == 'true'
         env:
           MP_TICKET: ${{ secrets.MP_TICKET }}
           MP_DATA: ${{ github.workspace }}/data
         run: |
-          # Con ticket propio basta una pasada; con el ticket publico el rate limit
-          # obliga a reintentar hasta que no queden detalles sin cachear.
+          set -o pipefail   # sin esto, un crash de scan.py queda enmascarado por tee
+          # Con ticket propio basta una pasada. Con el ticket publico el rate limit obliga
+          # a repetir tandas hasta que no queden detalles pendientes de descargar.
           for i in 1 2 3 4 5; do
+            echo "::group::Tanda $i"
             python pipeline/scan.py --min-rm 500 --min-nacional 2000 --min-dias 1 \
               --pausa 0.6 --presupuesto 420 | tee /tmp/scan.log
-            grep -q "0 sin cachear" /tmp/scan.log && break
+            echo "::endgroup::"
+            if grep -q "pendientes tras la tanda: 0" /tmp/scan.log; then
+              echo "Sin pendientes: barrido completo en $i tanda(s)."
+              break
+            fi
+            echo "Quedan detalles pendientes; nueva tanda."
           done
 
       - name: Generar entregables
@@ -71,6 +87,7 @@ jobs:
 
       - name: Enviar Excel de respaldo por correo
         if: steps.ventana.outputs.correr == 'true'
+        continue-on-error: true   # el aviso es el ultimo tramo: si falla, el dashboard ya quedo publicado
         env:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           EMAIL_DESTINO: ${{ vars.EMAIL_DESTINO || 'luisfelipe@realsachile.com' }}
@@ -86,12 +103,22 @@ jobs:
           git config user.name  "radar-licitaciones"
           git config user.email "actions@github.com"
           git add data docs
-          git diff --staged --quiet || git commit -m "Radar $(date -u +%Y-%m-%d): historico y dashboard"
+          if git diff --staged --quiet; then
+            echo "Sin cambios que guardar."
+            exit 0
+          fi
+          git commit -m "Radar $(date -u +%Y-%m-%d): historico y dashboard"
           git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
-          git push
+          if ! git push; then
+            echo "::error::No se pudo escribir en el repositorio. Casi siempre es el permiso del token:"
+            echo "::error::Settings -> Actions -> General -> Workflow permissions -> 'Read and write permissions' -> Save."
+            echo "::error::Sin esto el historico no se guarda y cada corrida marcaria todo como NUEVA."
+            exit 1
+          fi
 
       - name: Avisar por WhatsApp
         if: steps.ventana.outputs.correr == 'true'
+        continue-on-error: true
         env:
           WHATSAPP_PHONE: ${{ secrets.WHATSAPP_PHONE }}
           CALLMEBOT_APIKEY: ${{ secrets.CALLMEBOT_APIKEY }}

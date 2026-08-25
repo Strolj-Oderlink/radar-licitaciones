@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """Barrido de Mercado Publico -> licitaciones que calzan con Gamma / Realsa Brokers."""
-import json, os, sys, time, argparse, urllib.request, urllib.error, datetime as dt
+import json, os, sys, time, random, argparse, urllib.request, urllib.error, datetime as dt
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from taxonomia import (norm, puntuar, excluido, clasificar_oportunidad, NUCLEO, OBJETO, VERBO_CONTEXTUAL,
                        EXCLUYENTES, UMBRAL_MATCH, UMBRAL_ALTO)
@@ -14,21 +14,33 @@ TICKET = os.environ.get('MP_TICKET', 'F8537A18-6766-4DEF-9E59-426B4FEE2844')
 
 def log(m): print(f"[{dt.datetime.now():%H:%M:%S}] {m}", flush=True)
 
-def get_json(url, intentos=6):
-    espera = 1.5
+def get_json(url, intentos=10, critico=False):
+    """GET con reintentos y backoff. El ticket publico de Mercado Publico devuelve 429
+    con frecuencia, y desde IPs de datacenter (GitHub Actions) todavia mas, porque la
+    cuota es compartida entre todos los que usan ese ticket de demostracion."""
+    espera = 2.0
+    ultimo = None
     for i in range(intentos):
         try:
             req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
             return json.loads(urllib.request.urlopen(req, timeout=45).read())
         except urllib.error.HTTPError as e:
+            ultimo = f"HTTP {e.code}"
             if e.code == 429:
-                time.sleep(espera); espera = min(espera * 1.8, 20); continue
+                espera_real = espera + random.uniform(0, 1.5)   # jitter: evita sincronizarse
+                if critico: log(f"  429 (cuota del ticket); reintento {i+1}/{intentos} en {espera_real:.0f}s")
+                time.sleep(espera_real); espera = min(espera * 1.7, 45); continue
             if i == intentos - 1: raise
             time.sleep(espera)
-        except Exception:
+        except Exception as e:
+            ultimo = str(e)[:80]
             if i == intentos - 1: raise
-            time.sleep(espera); espera *= 1.6
-    return None
+            time.sleep(espera); espera *= 1.5
+    raise RuntimeError(
+        f"No se pudo obtener respuesta tras {intentos} intentos (ultimo error: {ultimo}). "
+        "Si es 429, el ticket publico de demostracion esta saturado. "
+        "Solicita un ticket propio en la mesa de ayuda de Mercado Publico y cargalo "
+        "en el secret MP_TICKET: elimina el rate limit y la corrida baja a menos de 1 minuto.")
 
 def uf_hoy():
     try:
@@ -40,7 +52,7 @@ def uf_hoy():
 
 # ------------------------------------------------------------ etapa 1: listado
 def listado_activas():
-    d = get_json(f"{API}?estado=activas&ticket={TICKET}")
+    d = get_json(f"{API}?estado=activas&ticket={TICKET}", intentos=12, critico=True)
     return d.get('Listado', [])
 
 def prefiltro(nombre):
@@ -75,6 +87,8 @@ def detalles(codigos, cache, pausa=1.1, presupuesto=None):
             log(f"  {i}/{len(nuevos)}"); json.dump(cache, open(CACHE,'w',encoding='utf-8'), ensure_ascii=False)
         time.sleep(pausa)
     json.dump(cache, open(CACHE, 'w', encoding='utf-8'), ensure_ascii=False)
+    pendientes = [c for c in codigos if c not in cache]
+    log(f"pendientes tras la tanda: {len(pendientes)}")
     return cache
 
 # ------------------------------------------------------------ etapa 3: reglas

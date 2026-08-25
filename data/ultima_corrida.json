@@ -1,16 +1,16 @@
 {
- "generado": "2026-08-25T09:38:53",
+ "generado": "2026-08-25T12:24:40",
  "uf": 40864.55,
- "activas": 4424,
- "candidatos": 335,
+ "activas": 4479,
+ "candidatos": 336,
  "matches": 10,
  "parametros": {
-  "min_rm": 500.0,
-  "min_nacional": 2000.0,
+  "min_rm": 500,
+  "min_nacional": 2000,
   "min_dias": 1,
   "max_detalles": 400,
-  "pausa": 0.5,
-  "presupuesto": 90
+  "pausa": 1.1,
+  "presupuesto": 30
  },
  "filas": [
   {
@@ -318,7 +318,7 @@
    "Descripcion": "- Servicio de asesoramiento inmobiliario e intermediación para la mantención y/o modificación del arriendo de oficina corporativa en Brasil.  - Contratación de personal para la operatividad regular y atención de público en oficina corporativa.  - Intermediación para el pago en moneda extranjera de todos los servicios y obligaciones legales derivados del arriendo, la contratación del personal y todos aquellos elementos necesarios para la continuidad operativa de la oficina corporativa.  ",
    "Por que calza": "objeto/titulo: oficina (+10) | transaccion: arriendo (+12) | UNSPSC 80131600 (+40)",
    "Rango estimado por tipo": "obras 100-1.000 UTM",
-   "Bajo umbral": "bajo umbral de monto (Nacional, UF 636 (umbral 2000.0))",
+   "Bajo umbral": "bajo umbral de monto (Nacional, UF 636 (umbral UF 2.000))",
    "Contacto": "Jaime Valenzuela Núñez",
    "Email contacto": "",
    "URL": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=1422259-9-CO26"
@@ -346,7 +346,7 @@
    "Descripcion": "El SERVIU Región de Coquimbo llama a participar en esta licitación a proponentes personas naturales y jurídicas, destinada a contratar dos servicios independientes de tasación comercial respecto del mismo inmueble, mediante dos líneas de adjudicación claramente delimitadas. Cada línea corresponde a una prestación autónoma, cuyo resultado será un informe de tasación comercial independiente, elaborado y suscrito por un tasador/profesional distinto del que ejecute la otra línea.   ",
    "Por que calza": "nucleo/titulo: tasacion (+24) | nucleo/desc: informe de tasacion (+15) | objeto/titulo: inmueble (+14)",
    "Rango estimado por tipo": "< 100 UTM (~< UF 170)",
-   "Bajo umbral": "bajo umbral de monto (Nacional, UF 73 (umbral 2000.0))",
+   "Bajo umbral": "bajo umbral de monto (Nacional, UF 73 (umbral UF 2.000))",
    "Contacto": "",
    "Email contacto": "",
    "URL": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=894863-37-L126"
@@ -374,7 +374,7 @@
    "Descripcion": "CONFORME A ESPECIFICACIONES TECNICA ADJUNTAS EN ARCHIVO",
    "Por que calza": "UNSPSC 80131500 (+40)",
    "Rango estimado por tipo": "obras 100-1.000 UTM",
-   "Bajo umbral": "bajo umbral de monto (RM, UF 489 (umbral 500.0))",
+   "Bajo umbral": "bajo umbral de monto (RM, UF 489 (umbral UF 500))",
    "Contacto": "NICOLE PEREZ RIVERA",
    "Email contacto": "",
    "URL": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2981-239-CO26"
@@ -414,6 +414,18 @@
   {
    "codigo": "1057049-296-LR26",
    "nombre": "JCD VALVULA BIOLOGICA CON COMODATO",
+   "score": 0,
+   "motivo": "score 0 < 30"
+  },
+  {
+   "codigo": "1057055-68-LP26",
+   "nombre": "GSP SUMINISTRO DE MEDICAMENTOS PROPOFOL CON EQUIPOS EN COMODATO",
+   "score": 0,
+   "motivo": "score 0 < 30"
+  },
+  {
+   "codigo": "1057404-82-LE26",
+   "nombre": "2do Llamado ARRIENDO TORRE ENDOSCOPICA OTORRINO  ",
    "score": 0,
    "motivo": "score 0 < 30"
   },
@@ -1036,18 +1048,6 @@
    "motivo": "score 0 < 30"
   },
   {
-   "codigo": "2295-87-LE26",
-   "nombre": "Adquisición de materiales eléctricos para la habilitación eléctrica de la Fiesta de la Chilenidad 2026",
-   "score": 0,
-   "motivo": "score 0 < 30"
-  },
-  {
-   "codigo": "2308-63-LR26",
-   "nombre": "REHABILITACIÓN REPARACIÓN SUMINISTRO PUESTA EN MARCHA Y MANTENCION DEL SISTEMA DE JUEGOS DE AGUA DE LA PILETA PLAZA DE ARMAS",
-   "score": 0,
-   "motivo": "score 0 < 30"
-  },
-  {
    "codigo": "2308-72-LE26",
    "nombre": "ADQ. HABILITACIÓN Y PUESTA EN MARCHA BÁSCULA",
    "score": 8,
@@ -1120,12 +1120,6 @@
    "motivo": "score 6 < 30"
   },
   {
-   "codigo": "2405-129-LE26",
-   "nombre": "ARRIENDO GABINETE PSICOTECNICO 3 LLAMADO ",
-   "score": 0,
-   "motivo": "score 0 < 30"
-  },
-  {
    "codigo": "2408-177-LE26",
    "nombre": "ARRIENDO DE BAÑOS QUÍMICOS FIESTAS PATRIAS EN LOS ÁNGELES 2026.",
    "score": 0,
@@ -1184,6 +1178,12 @@
    "nombre": "HABILITACION SALAS DE ESPERA SP787",
    "score": 16,
    "motivo": "score 16 < 30"
+  },
+  {
+   "codigo": "2452-19-L126",
+   "nombre": "MEJORAMIENTO DE INFRAESTRUCTURA EN INMUEBLE",
+   "score": 14,
+   "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
   },
   {
    "codigo": "2455-46-LP26",
@@ -1310,6 +1310,12 @@
    "nombre": "HABILITACIÓN CASA DE OFICIOS",
    "score": 11,
    "motivo": "score 11 < 30"
+  },
+  {
+   "codigo": "2699-32-LR26",
+   "nombre": "Servicio de Arriendo de Flota Vehicular",
+   "score": 0,
+   "motivo": "score 0 < 30"
   },
   {
    "codigo": "2702-62-LE26",
@@ -1498,12 +1504,6 @@
    "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
   },
   {
-   "codigo": "3447-136-LE26",
-   "nombre": "Servicio de Lavandería Recintos DEPSA",
-   "score": 5,
-   "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
-  },
-  {
    "codigo": "3453-78-LE26",
    "nombre": "ADQ SERV. REP. Y MANT DE OFICINAS PASILLOS Y BAÑOS",
    "score": 10,
@@ -1572,12 +1572,6 @@
   {
    "codigo": "3668-14-LP26",
    "nombre": "MEJORAMIENTO CAMARIN Y SEDE ESTADIO LOS BAJOS DE SAN AGUSTÍN CALERA DE TANGO - CÓDIGO BIP N°40069327-0",
-   "score": 8,
-   "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
-  },
-  {
-   "codigo": "3712-50-LP26",
-   "nombre": "MANTENCIÓN DE DEPENDENCIAS MUNICIPALES",
    "score": 8,
    "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
   },
@@ -1966,10 +1960,10 @@
    "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
   },
   {
-   "codigo": "5407-57-LE26",
-   "nombre": "DIAGNÓSTICO  PLAN MAESTRO BARRIO EL SANTO - TOMÉ",
-   "score": 16,
-   "motivo": "score 16 < 30"
+   "codigo": "5413-65-LE26",
+   "nombre": "SERVICIO DE TRASLADO DE ESTURIONES COYHAIQUE",
+   "score": 0,
+   "motivo": "score 0 < 30"
   },
   {
    "codigo": "5420-20-LE26",
@@ -2086,6 +2080,12 @@
    "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
   },
   {
+   "codigo": "673663-20-LP26",
+   "nombre": "CONSTRUCCION SEDE SOCIAL EL BOSQUE COMUNA DE ANDA",
+   "score": 8,
+   "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
+  },
+  {
    "codigo": "677-6-LP26",
    "nombre": "Elab. Diag. Plan Maestro y Plan de Gestión. Lonco",
    "score": 23,
@@ -2162,6 +2162,12 @@
    "nombre": "Mantención Oficina ubicada en Las Lengas N°1450 de la ciudad de Coyhaique de INDAP, región de Aysén",
    "score": 10,
    "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
+  },
+  {
+   "codigo": "748201-10-LE26",
+   "nombre": "SUMINISTRO DE ESPONJA DESECHABLE  JABONOSA PARA LAS FARMACIAS DE LOS CENTROS DE SALUD Y  REHABILITACIÓN CAPREDENA",
+   "score": 0,
+   "motivo": "score 0 < 30"
   },
   {
    "codigo": "748201-9-LP26",
