@@ -51,6 +51,7 @@ jobs:
           echo "  PAGES_URL.......... ${{ vars.PAGES_URL || '(sin variable, se usa el valor por defecto)' }}"
 
       - name: Barrer Mercado Publico
+        id: barrido
         if: steps.ventana.outputs.correr == 'true'
         env:
           MP_TICKET: ${{ secrets.MP_TICKET }}
@@ -59,17 +60,30 @@ jobs:
           set -o pipefail   # sin esto, un crash de scan.py queda enmascarado por tee
           # Con ticket propio basta una pasada. Con el ticket publico el rate limit obliga
           # a repetir tandas hasta que no queden detalles pendientes de descargar.
+          exito=0
           for i in 1 2 3 4 5; do
             echo "::group::Tanda $i"
-            python pipeline/scan.py --min-rm 500 --min-nacional 2000 --min-dias 1 \
-              --pausa 0.6 --presupuesto 420 | tee /tmp/scan.log
-            echo "::endgroup::"
-            if grep -q "pendientes tras la tanda: 0" /tmp/scan.log; then
-              echo "Sin pendientes: barrido completo en $i tanda(s)."
-              break
+            if python pipeline/scan.py --min-rm 500 --min-nacional 2000 --min-dias 1 \
+                 --pausa 0.6 --presupuesto 420 | tee /tmp/scan.log; then
+              exito=1
+              echo "::endgroup::"
+              if grep -q "pendientes tras la tanda: 0" /tmp/scan.log; then
+                echo "Sin pendientes: barrido completo en $i tanda(s)."
+                break
+              fi
+              echo "Quedan detalles pendientes; nueva tanda."
+            else
+              exito=0
+              echo "::endgroup::"
+              echo "::warning::La tanda $i fallo. Reintento en 30s."
+              sleep 30
             fi
-            echo "Quedan detalles pendientes; nueva tanda."
           done
+          if [ "$exito" != "1" ]; then
+            echo "::error::El barrido no pudo completarse. NO se publica nada: se conserva"
+            echo "::error::el dashboard y el historico de la corrida anterior."
+            exit 1
+          fi
 
       - name: Generar entregables
         if: steps.ventana.outputs.correr == 'true'
@@ -79,6 +93,7 @@ jobs:
         run: python pipeline/run.py
 
       - name: Publicar en chilecompra.gamma-re.com
+        id: publicar
         if: steps.ventana.outputs.correr == 'true'
         env:
           PAGES_URL: ${{ vars.PAGES_URL || 'https://chilecompra.gamma-re.com' }}
@@ -86,6 +101,7 @@ jobs:
         run: python pipeline/publicar.py
 
       - name: Enviar Excel de respaldo por correo
+        id: correo
         if: steps.ventana.outputs.correr == 'true'
         continue-on-error: true   # el aviso es el ultimo tramo: si falla, el dashboard ya quedo publicado
         env:
@@ -117,12 +133,29 @@ jobs:
           fi
 
       - name: Avisar por WhatsApp
+        id: whatsapp
         if: steps.ventana.outputs.correr == 'true'
         continue-on-error: true
         env:
           WHATSAPP_PHONE: ${{ secrets.WHATSAPP_PHONE }}
           CALLMEBOT_APIKEY: ${{ secrets.CALLMEBOT_APIKEY }}
         run: python pipeline/notificar.py "$(cat aviso.txt)"
+
+      - name: Resumen de la corrida
+        if: always() && steps.ventana.outputs.correr == 'true'
+        run: |
+          {
+            echo "## Resultado de la corrida"
+            echo ""
+            echo "| Paso | Estado |"
+            echo "|---|---|"
+            echo "| Barrido de Mercado Publico | ${{ steps.barrido.outcome || 'ver arriba' }} |"
+            echo "| Publicacion del dashboard | ${{ steps.publicar.outcome || 'ver arriba' }} |"
+            echo "| Envio del Excel por correo | ${{ steps.correo.outcome }} |"
+            echo "| Aviso por WhatsApp | ${{ steps.whatsapp.outcome }} |"
+            echo ""
+            echo "Dashboard: ${{ vars.PAGES_URL || 'https://chilecompra.gamma-re.com' }}"
+          } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Adjuntar entregables a la ejecucion
         if: steps.ventana.outputs.correr == 'true'

@@ -51,9 +51,29 @@ def uf_hoy():
         return 40864.55, 'fallback'
 
 # ------------------------------------------------------------ etapa 1: listado
-def listado_activas():
-    d = get_json(f"{API}?estado=activas&ticket={TICKET}", intentos=12, critico=True)
-    return d.get('Listado', [])
+# Mercado Publico a veces responde 200 con una lista vacia en vez de un error cuando
+# el ticket esta saturado. Sin este piso, una respuesta vacia se interpreta como
+# "hoy no hay licitaciones" y termina publicando un tablero en blanco.
+MINIMO_PLAUSIBLE = 500
+
+
+def listado_activas(minimo=MINIMO_PLAUSIBLE):
+    for intento in range(1, 4):
+        d = get_json(f"{API}?estado=activas&ticket={TICKET}", intentos=12, critico=True)
+        L = (d or {}).get('Listado') or []
+        if len(L) >= minimo:
+            return L
+        log(f"listado sospechosamente corto: {len(L)} licitaciones (se esperan >{minimo}). "
+            f"Intento {intento}/3; espero 30s.")
+        time.sleep(30)
+    raise SystemExit(
+        f"ABORTADO: la API devolvio {len(L)} licitaciones activas, cifra implausible "
+        f"(lo normal son ~4.500). Casi siempre significa que el ticket esta saturado y la "
+        f"API responde 200 con lista vacia en vez de un error.\n"
+        f"No se genera ni publica nada: se conserva el dashboard y el historico de la "
+        f"corrida anterior en vez de sobrescribirlos con datos vacios.\n"
+        f"Solucion de fondo: pedir un ticket propio a la mesa de ayuda de Mercado Publico "
+        f"y cargarlo en el secret MP_TICKET.")
 
 def prefiltro(nombre):
     """Filtro barato sobre el titulo: decide a quien le pedimos el detalle."""

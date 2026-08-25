@@ -26,15 +26,23 @@ h1{font-size:26px;margin:0 0 4px;letter-spacing:-.02em}
 button.f{background:var(--chip);border:1px solid var(--line);color:var(--ink);border-radius:99px;
 padding:6px 14px;font-size:13px;cursor:pointer}
 button.f[aria-pressed="true"]{background:var(--brand);color:#fff;border-color:var(--brand)}
-.card{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--media);
+.card{background:var(--surface);border:1px solid var(--line);border-left:8px solid var(--line);
 border-radius:10px;padding:16px 18px;margin-bottom:12px;position:relative}
-.card.alta{border-left-color:var(--alta)}
-.card.nueva{border-left-width:8px;border-left-color:var(--ok);
-box-shadow:0 0 0 1px var(--ok) inset,0 2px 10px rgba(30,122,75,.10)}
-.card.nueva::after{content:"NUEVA";position:absolute;top:14px;right:16px;background:var(--ok);
+/* La banda lateral codifica el estado del plazo. Un solo color por tarjeta:
+   rojo (cierra en menos de 6 dias) > verde (nueva) > ambar (cambio) > azul (primer 20% del plazo). */
+.card.urgente{border-left-color:var(--alta);box-shadow:0 0 0 1px var(--alta) inset,0 2px 10px rgba(163,38,38,.10)}
+.card.nueva{border-left-color:var(--ok);box-shadow:0 0 0 1px var(--ok) inset,0 2px 10px rgba(30,122,75,.10)}
+.card.cambio{border-left-color:var(--media)}
+.card.temprano{border-left-color:var(--brand);box-shadow:0 0 0 1px var(--brand) inset}
+.card.marca-nueva::after{content:"NUEVA";position:absolute;top:14px;right:16px;background:var(--ok);
 color:#fff;font-size:10.5px;font-weight:700;letter-spacing:.09em;padding:3px 9px;border-radius:4px}
-.card.nueva h3{padding-right:78px}
-.card.cambio{border-left-width:8px;border-left-color:var(--media)}
+.card.marca-nueva h3{padding-right:78px}
+/* Region Metropolitana: titulo en verde para distinguirla de un vistazo. */
+.card.stgo h3 a{color:var(--ok)}
+.leyenda{display:flex;flex-wrap:wrap;gap:16px;margin:0 0 22px;padding:12px 14px;
+background:var(--surface);border:1px solid var(--line);border-radius:9px;font-size:12.5px;color:var(--muted)}
+.leyenda i{display:inline-block;width:4px;height:13px;border-radius:2px;margin-right:7px;
+vertical-align:-2px}
 .card h3{margin:0 0 6px;font-size:16.5px;line-height:1.35}
 .card h3 a{color:inherit;text-decoration:none}.card h3 a:hover{text-decoration:underline}
 .meta{color:var(--muted);font-size:12.5px;margin-bottom:10px}
@@ -61,6 +69,13 @@ td a{color:var(--brand)}
 <div class="sub">__SUB__</div>
 <div class="kpis">__KPIS__</div>
 <div class="bar"><strong style="font-size:13px;margin-right:4px">Filtrar:</strong>__FILTROS__</div>
+<div class="leyenda">
+<span><i style="background:var(--alta)"></i>Cierra en menos de 6 días</span>
+<span><i style="background:var(--ok)"></i>Nueva en el radar</span>
+<span><i style="background:var(--media)"></i>Cambió desde la última corrida</span>
+<span><i style="background:var(--brand)"></i>Recién publicada (primer 20% del plazo)</span>
+<span><b style="color:var(--ok)">Título en verde</b> = Región Metropolitana</span>
+</div>
 <div id="cards">__CARDS__</div>
 __BAJO__
 <div class="foot">__FOOT__</div>
@@ -78,6 +93,29 @@ document.querySelectorAll('button.f').forEach(b=>b.onclick=()=>{
 </script>"""
 
 def esc(x): return html.escape(str(x or ''))
+
+
+def estado_plazo(r):
+    """Clasifica la tarjeta segun el avance de su plazo.
+
+    - urgente : cierra en menos de 6 dias
+    - temprano: va en el primer 20% del periodo entre publicacion y cierre
+    La precedencia final (rojo > verde > ambar > azul) se resuelve en build().
+    """
+    dias = r.get('Dias al cierre')
+    urgente = dias is not None and dias < 6
+    temprano = False
+    pub, cie = (r.get('Publicacion') or '')[:10], (r.get('Cierre') or '')[:10]
+    if pub and cie:
+        try:
+            p = dt.date.fromisoformat(pub); c = dt.date.fromisoformat(cie)
+            total = (c - p).days
+            if total > 0:
+                transcurrido = (dt.date.today() - p).days
+                temprano = (transcurrido / total) <= 0.20
+        except ValueError:
+            pass
+    return urgente, temprano
 
 
 def num(v, dec=0):
@@ -107,17 +145,27 @@ def build(corrida, filas, bajo, ruta):
     C=[]
     for r in filas:
         d=r['Dias al cierre']
+        es_nueva = r.get('Novedad')=='NUEVA'
+        es_cambio = str(r.get('Novedad','')).startswith('CAMBIO')
+        urgente, temprano = estado_plazo(r)
         tags=[f'<span class="tag p {"alta" if r["Prioridad"]=="ALTA" else ""}">{r["Prioridad"]} · {r["Score"]}</span>',
               f'<span class="tag" style="background:var(--brand);color:#fff">{esc(r["Tipo de oportunidad"])}</span>',
               f'<span class="tag">{esc(r["Entidad sugerida"])}</span>',
               f'<span class="tag">{esc(r["Tipo"])} · {esc(r["Monto publicado"])}</span>']
-        if d is not None and d<=7: tags.insert(1,f'<span class="tag d">cierra en {d} d</span>')
+        if urgente: tags.insert(1,f'<span class="tag d">cierra en {d} d</span>')
+        elif d is not None and d<=7: tags.insert(1,f'<span class="tag">cierra en {d} d</span>')
+        if temprano and not urgente:
+            tags.insert(1,'<span class="tag" style="background:var(--brand);color:#fff;font-weight:600">'
+                          'Recien publicada</span>')
         if str(r.get('Novedad','')).startswith('CAMBIO'):
             tags.insert(1, f'<span class="tag n" style="background:var(--media)">{esc(r["Novedad"][:44])}</span>')
-        es_nueva = r.get('Novedad')=='NUEVA'
-        es_cambio = str(r.get('Novedad','')).startswith('CAMBIO')
-        clases = ' '.join(filter(None, ['card', 'alta' if r['Prioridad']=='ALTA' else '',
-                                        'nueva' if es_nueva else '', 'cambio' if es_cambio else '']))
+        # Una sola banda por tarjeta: la urgencia manda sobre todo lo demas.
+        banda = ('urgente' if urgente else 'nueva' if es_nueva else
+                 'cambio' if es_cambio else 'temprano' if temprano else '')
+        es_stgo = 'metropolitana' in (r.get('Region') or '').lower()
+        clases = ' '.join(filter(None, ['card', banda,
+                                        'marca-nueva' if es_nueva else '',
+                                        'stgo' if es_stgo else '']))
         C.append(f'''<div class="{clases}" data-nue="{'si' if es_nueva else 'no'}"
  data-op="{esc(r['Tipo de oportunidad'])}" data-ent="{esc(r['Entidad sugerida'])}" data-pri="{r['Prioridad']}" data-reg="{esc(r['Region'])}">
 <h3><a href="{esc(r['URL'])}" target="_blank" rel="noopener">{esc(r['Nombre'])}</a></h3>

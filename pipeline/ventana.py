@@ -34,6 +34,25 @@ print(f"hora Santiago: {ahora:%Y-%m-%d %H:%M} ({['lun','mar','mie','jue','vie','
       f"| en ventana: {ok} | ya corrio hoy: {ya_corrio} | forzar: {forzar} -> {'CORRER' if correr else 'OMITIR'}")
 with open(os.environ.get('GITHUB_OUTPUT', '/dev/null'), 'a') as f:
     f.write(f"correr={'true' if correr else 'false'}\n")
+resumen = os.environ.get('GITHUB_STEP_SUMMARY')
+dia = ['lunes','martes','miercoles','jueves','viernes','sabado','domingo'][ahora.weekday()]
+
 if correr:
     os.makedirs(os.path.dirname(EST), exist_ok=True)
     json.dump({'ultima_corrida': hoy, 'hora': ahora.isoformat()}, open(EST, 'w'))
+    if resumen:
+        open(resumen, 'a').write(
+            f"## Radar ejecutandose\n\n{dia} {ahora:%d-%m-%Y %H:%M} hora de Santiago.\n\n")
+else:
+    # Este es el caso que mas confunde: el job termina en verde, todos los pasos quedan
+    # omitidos y no llega ni correo ni WhatsApp. Hay que decirlo con todas sus letras.
+    motivo = ('ya se ejecuto hoy' if ya_corrio else
+              f'{dia} {ahora:%H:%M} no es ventana de ejecucion (lunes 11:00 / miercoles 21:00)')
+    print(f"::notice title=Corrida omitida::{motivo}. No se publicara dashboard ni se enviaran "
+          f"avisos. Para ejecutar igual: Run workflow con la casilla 'forzar' marcada.")
+    if resumen:
+        open(resumen, 'a').write(
+            f"## Corrida omitida\n\n**Motivo:** {motivo}.\n\n"
+            f"Los pasos siguientes aparecen como omitidos y **no** se publico el dashboard "
+            f"ni se envio correo o WhatsApp. Esto no es un error.\n\n"
+            f"Para forzar una corrida fuera de horario: *Run workflow* con **forzar** marcado.\n\n")
