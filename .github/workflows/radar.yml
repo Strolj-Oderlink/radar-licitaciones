@@ -58,13 +58,19 @@ jobs:
           MP_DATA: ${{ github.workspace }}/data
         run: |
           set -o pipefail   # sin esto, un crash de scan.py queda enmascarado por tee
-          # Con ticket propio basta una pasada. Con el ticket publico el rate limit obliga
-          # a repetir tandas hasta que no queden detalles pendientes de descargar.
+          # El ritmo depende del ticket: el propio tiene cuota de 10.000 consultas diarias
+          # y tolera ir rapido; el publico de demostracion es compartido y obliga a frenar.
+          # Se decide aqui para que quitar el secret no rompa nada: degrada solo.
+          if [ -n "$MP_TICKET" ]; then
+            PAUSA=0.15; echo "Ticket propio: barrido rapido (pausa ${PAUSA}s)."
+          else
+            PAUSA=0.6;  echo "::warning::Sin MP_TICKET: se usa el ticket publico, mas lento y con 429."
+          fi
           exito=0
           for i in 1 2 3 4 5; do
             echo "::group::Tanda $i"
             if python pipeline/scan.py --min-rm 500 --min-nacional 2000 --min-dias 1 \
-                 --pausa 0.6 --presupuesto 420 | tee /tmp/scan.log; then
+                 --pausa "$PAUSA" --presupuesto 420 | tee /tmp/scan.log; then
               exito=1
               echo "::endgroup::"
               if grep -q "pendientes tras la tanda: 0" /tmp/scan.log; then
