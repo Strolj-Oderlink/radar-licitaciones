@@ -1,0 +1,106 @@
+name: Radar de licitaciones
+
+on:
+  schedule:
+    # GitHub Actions programa en UTC; Chile alterna UTC-4 / UTC-3.
+    # Se dispara en los dos horarios posibles y pipeline/ventana.py deja pasar
+    # solo el que corresponde a lunes 11:00 y miercoles 21:00 hora de Santiago.
+    - cron: '0 14,15 * * 1'
+    - cron: '0 0,1 * * 4'
+  workflow_dispatch:
+    inputs:
+      forzar:
+        description: 'Correr aunque no sea la ventana horaria'
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: radar-licitaciones
+  cancel-in-progress: false
+
+jobs:
+  radar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      - name: Verificar ventana horaria
+        id: ventana
+        env:
+          FORZAR: ${{ github.event_name == 'workflow_dispatch' && inputs.forzar }}
+        run: python pipeline/ventana.py
+
+      - name: Barrer Mercado Publico
+        if: steps.ventana.outputs.correr == 'true'
+        env:
+          MP_TICKET: ${{ secrets.MP_TICKET }}
+          MP_DATA: ${{ github.workspace }}/data
+        run: |
+          # Con ticket propio basta una pasada; con el ticket publico el rate limit
+          # obliga a reintentar hasta que no queden detalles sin cachear.
+          for i in 1 2 3 4 5; do
+            python pipeline/scan.py --min-rm 500 --min-nacional 2000 --min-dias 1 \
+              --pausa 0.6 --presupuesto 420 | tee /tmp/scan.log
+            grep -q "0 sin cachear" /tmp/scan.log && break
+          done
+
+      - name: Generar entregables
+        if: steps.ventana.outputs.correr == 'true'
+        env:
+          MP_DATA: ${{ github.workspace }}/data
+          MP_OUT: ${{ github.workspace }}/salidas
+        run: python pipeline/run.py
+
+      - name: Publicar en chilecompra.gamma-re.com
+        if: steps.ventana.outputs.correr == 'true'
+        env:
+          PAGES_URL: ${{ vars.PAGES_URL || 'https://chilecompra.gamma-re.com' }}
+          MP_OUT: ${{ github.workspace }}/salidas
+        run: python pipeline/publicar.py
+
+      - name: Enviar Excel de respaldo por correo
+        if: steps.ventana.outputs.correr == 'true'
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          EMAIL_DESTINO: ${{ vars.EMAIL_DESTINO || 'luisfelipe@realsachile.com' }}
+          EMAIL_REMITENTE: ${{ vars.EMAIL_REMITENTE || 'Radar de Licitaciones <radar@envios.gamma-re.com>' }}
+          PAGES_URL: ${{ vars.PAGES_URL || 'https://chilecompra.gamma-re.com' }}
+          MP_OUT: ${{ github.workspace }}/salidas
+          MP_DATA: ${{ github.workspace }}/data
+        run: python pipeline/enviar_correo.py
+
+      - name: Guardar historico y dashboard en el repo
+        if: steps.ventana.outputs.correr == 'true'
+        run: |
+          git config user.name  "radar-licitaciones"
+          git config user.email "actions@github.com"
+          git add data docs
+          git diff --staged --quiet || git commit -m "Radar $(date -u +%Y-%m-%d): historico y dashboard"
+          git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
+          git push
+
+      - name: Avisar por WhatsApp
+        if: steps.ventana.outputs.correr == 'true'
+        env:
+          WHATSAPP_PHONE: ${{ secrets.WHATSAPP_PHONE }}
+          CALLMEBOT_APIKEY: ${{ secrets.CALLMEBOT_APIKEY }}
+        run: python pipeline/notificar.py "$(cat aviso.txt)"
+
+      - name: Adjuntar entregables a la ejecucion
+        if: steps.ventana.outputs.correr == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: entregables
+          path: salidas/
+          retention-days: 90
