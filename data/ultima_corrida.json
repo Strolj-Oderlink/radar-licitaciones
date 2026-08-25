@@ -1,16 +1,16 @@
 {
- "generado": "2026-08-25T13:28:00",
+ "generado": "2026-08-25T17:38:29",
  "uf": 40865.87,
- "activas": 4504,
- "candidatos": 335,
+ "activas": 4508,
+ "candidatos": 336,
  "matches": 10,
  "parametros": {
-  "min_rm": 500,
-  "min_nacional": 2000,
+  "min_rm": 500.0,
+  "min_nacional": 2000.0,
   "min_dias": 1,
   "max_detalles": 400,
-  "pausa": 1.1,
-  "presupuesto": 40
+  "pausa": 0.15,
+  "presupuesto": 420
  },
  "filas": [
   {
@@ -594,6 +594,12 @@
   {
    "codigo": "1080936-43-LE26",
    "nombre": "SERVICIO DE MANTENCIÓN DEL SISTEMA DE DETECCIÓN ALARMA Y CONTROL DE INCENDIO DEL EDIFICIO DE LA ESCUELA DE INVESTIGACIONES POLICIALES",
+   "score": 8,
+   "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
+  },
+  {
+   "codigo": "1109692-8-LE26",
+   "nombre": "EQUIPAMIENTO AUDIOVISUAL Y MULTIMEDIA SEDE PORVENIR",
    "score": 8,
    "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
   },

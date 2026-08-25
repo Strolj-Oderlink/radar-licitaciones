@@ -1,1 +1,102 @@
-{}
+{
+ "3994-21-L126": {
+  "primera_vista": "2026-08-25",
+  "ultima_vista": "2026-08-25",
+  "score": 78,
+  "estado": "Publicada",
+  "cierre": "2026-08-26 15:00",
+  "monto_uf": null,
+  "nombre": "SERVICIO DE TASACION COMERCIAL DE INMUEBLE",
+  "entidad": "Realsa Brokers"
+ },
+ "2760-98-LE26": {
+  "primera_vista": "2026-08-25",
+  "ultima_vista": "2026-08-25",
+  "score": 66,
+  "estado": "Publicada",
+  "cierre": "2026-08-26 15:00",
+  "monto_uf": null,
+  "nombre": "ARRIENDO DE INMUEBLE PARA BODEGA Y ARCHIVOS INMEDIATOS DE DISTINTAS DIRECCIONES MUNICIPALES",
+  "entidad": "Realsa Brokers"
+ },
+ "1743-64-LE26": {
+  "primera_vista": "2026-08-25",
+  "ultima_vista": "2026-08-25",
+  "score": 66,
+  "estado": "Publicada",
+  "cierre": "2026-08-31 16:00",
+  "monto_uf": null,
+  "nombre": "SERVICIO DE ARRIENDO INMUEBLES PARA OFICINAS",
+  "entidad": "Realsa Brokers"
+ },
+ "2495-16-CO26": {
+  "primera_vista": "2026-08-25",
+  "ultima_vista": "2026-08-25",
+  "score": 66,
+  "estado": "Publicada",
+  "cierre": "2026-08-31 16:00",
+  "monto_uf": null,
+  "nombre": "ARRIENDO DE INMUEBLE PARA OFICINA Y RESIDENCIA",
+  "entidad": "Realsa Brokers"
+ },
+ "2359-13-LP26": {
+  "primera_vista": "2026-08-25",
+  "ultima_vista": "2026-08-25",
+  "score": 66,
+  "estado": "Publicada",
+  "cierre": "2026-09-08 15:30",
+  "monto_uf": null,
+  "nombre": "ARRIENDO DE INMUEBLES 2026-2028",
+  "entidad": "Gamma"
+ },
+ "2713-157-LP26": {
+  "primera_vista": "2026-08-25",
+  "ultima_vista": "2026-08-25",
+  "score": 59,
+  "estado": "Publicada",
+  "cierre": "2026-09-02 09:30",
+  "monto_uf": 3524.0,
+  "nombre": "Servicio de arriendo - Folio 852 - DIDECO",
+  "entidad": "Gamma"
+ },
+ "552578-38-L126": {
+  "primera_vista": "2026-08-25",
+  "ultima_vista": "2026-08-25",
+  "score": 56,
+  "estado": "Publicada",
+  "cierre": "2026-08-27 18:00",
+  "monto_uf": null,
+  "nombre": "CONCESIÓN DE LOCALES COMERCIALES PASEO SAN RAFAEL",
+  "entidad": "Realsa Brokers"
+ },
+ "4295-54-LR26": {
+  "primera_vista": "2026-08-25",
+  "ultima_vista": "2026-08-25",
+  "score": 55,
+  "estado": "Publicada",
+  "cierre": "2026-10-14 15:00",
+  "monto_uf": null,
+  "nombre": "VENTA DE TERRENOS DE PROPIEDAD MUNICIPAL LA SERENA",
+  "entidad": "Gamma"
+ },
+ "5358-9-LR26": {
+  "primera_vista": "2026-08-25",
+  "ultima_vista": "2026-08-25",
+  "score": 49,
+  "estado": "Publicada",
+  "cierre": "2026-10-16 15:01",
+  "monto_uf": 122351.0,
+  "nombre": "ADQUISICIÓN DE TERRENO PARA PROYECTO EDUCACIONAL U",
+  "entidad": "Gamma"
+ },
+ "867990-62-LE26": {
+  "primera_vista": "2026-08-25",
+  "ultima_vista": "2026-08-25",
+  "score": 38,
+  "estado": "Publicada",
+  "cierre": "2026-08-31 15:00",
+  "monto_uf": 1101.0,
+  "nombre": "CDP 91352 - CC 102 — TASACIÓN DE BIENES INMUEBLES",
+  "entidad": "Realsa Brokers"
+ }
+}
