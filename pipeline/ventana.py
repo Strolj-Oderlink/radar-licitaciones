@@ -16,10 +16,17 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 EST = os.path.join(ROOT, 'data', 'estado_ejecucion.json')
 
 # Objetivo: lunes 11:00 y miercoles 21:00, hora de Santiago.
-# El workflow dispara en los dos horarios UTC posibles (UTC-4 y UTC-3); solo uno
-# de ellos cae en la hora local correcta y el otro se descarta aqui. El margen de
-# una hora extra absorbe el atraso tipico del scheduler de GitHub Actions.
-VENTANAS = {0: (11, 12), 2: (21, 22)}
+#
+# GitHub documenta que los eventos programados se retrasan con carga alta y que,
+# si la carga es suficiente, los trabajos encolados se DESCARTAN. Por eso el
+# workflow dispara varias veces dentro de cada ventana (y en un minuto fuera del
+# peak): basta con que uno de los intentos sobreviva. El primero que entra marca
+# estado_ejecucion.json y los demas se omiten solos.
+VENTANAS = {0: (11, 13), 2: (21, 23)}
+
+# Red de seguridad: si GitHub descarto todos los intentos de la semana, o deshabilito
+# el schedule por inactividad, una corrida de recuperacion evita quedar ciego.
+RETRASO_MAXIMO_DIAS = 4
 forzar = os.environ.get('FORZAR', '').lower() in ('1', 'true', 'yes')
 
 rango = VENTANAS.get(ahora.weekday())
@@ -29,9 +36,25 @@ try: prev = json.load(open(EST))
 except Exception: prev = {}
 ya_corrio = prev.get('ultima_corrida') == hoy
 
-correr = forzar or (ok and not ya_corrio)
+# Recuperacion: si hace demasiado que no hay corrida efectiva, correr igual.
+dias_sin_correr = None
+if prev.get('ultima_corrida'):
+    try:
+        dias_sin_correr = (ahora.date() - dt.date.fromisoformat(prev['ultima_corrida'])).days
+    except ValueError:
+        pass
+recuperacion = (dias_sin_correr is not None
+                and dias_sin_correr >= RETRASO_MAXIMO_DIAS
+                and not ya_corrio)
+
+correr = forzar or (ok and not ya_corrio) or recuperacion
 print(f"hora Santiago: {ahora:%Y-%m-%d %H:%M} ({['lun','mar','mie','jue','vie','sab','dom'][ahora.weekday()]}) "
-      f"| en ventana: {ok} | ya corrio hoy: {ya_corrio} | forzar: {forzar} -> {'CORRER' if correr else 'OMITIR'}")
+      f"| en ventana: {ok} | ya corrio hoy: {ya_corrio} | dias sin correr: {dias_sin_correr} "
+      f"| forzar: {forzar} | recuperacion: {recuperacion} -> {'CORRER' if correr else 'OMITIR'}")
+if recuperacion and not ok:
+    print(f"::warning title=Corrida de recuperacion::Pasaron {dias_sin_correr} dias sin corrida "
+          f"efectiva. GitHub pudo haber descartado los disparos programados. Se ejecuta fuera "
+          f"de la ventana habitual para no quedar sin datos.")
 with open(os.environ.get('GITHUB_OUTPUT', '/dev/null'), 'a') as f:
     f.write(f"correr={'true' if correr else 'false'}\n")
 resumen = os.environ.get('GITHUB_STEP_SUMMARY')

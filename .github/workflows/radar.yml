@@ -2,11 +2,24 @@ name: Radar de licitaciones
 
 on:
   schedule:
-    # GitHub Actions programa en UTC; Chile alterna UTC-4 / UTC-3.
-    # Se dispara en los dos horarios posibles y pipeline/ventana.py deja pasar
-    # solo el que corresponde a lunes 11:00 y miercoles 21:00 hora de Santiago.
-    - cron: '0 14,15 * * 1'
-    - cron: '0 0,1 * * 4'
+    # Objetivo: lunes 11:00 y miercoles 21:00, hora de Santiago.
+    #
+    # Tres razones para tantos disparos:
+    #  1. GitHub programa en UTC y Chile alterna UTC-4 / UTC-3 segun temporada.
+    #  2. GitHub retrasa los eventos programados con carga alta y DESCARTA los
+    #     encolados si la carga es suficiente, por lo que un disparo unico no
+    #     garantiza nada. Con varios, basta que uno sobreviva.
+    #  3. El minuto :23 evita el inicio de hora, que es el peak de carga y el
+    #     momento con mas descartes (recomendacion explicita de GitHub).
+    #
+    # pipeline/ventana.py deja pasar solo el primero que caiga en la ventana
+    # local correcta; los demas se omiten en 30 segundos.
+    - cron: '23 14,15,16,17 * * 1'   # lunes: 11:23 / 12:23 / 13:23 en Santiago
+    - cron: '23 0,1,2,3 * * 4'       # miercoles: 21:23 / 22:23 / 23:23 en Santiago
+    # Chequeo diario: normalmente omite, pero dispara una corrida de recuperacion
+    # si pasaron 4+ dias sin ejecucion efectiva. Ademas mantiene el repositorio
+    # activo, porque GitHub deshabilita los schedules tras 60 dias de inactividad.
+    - cron: '41 16 * * *'
   workflow_dispatch:
     inputs:
       forzar:
