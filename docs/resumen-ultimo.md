@@ -1,6 +1,6 @@
 # Licitaciones que calzan — Gamma / Realsa Brokers
 
-**Corrida:** 10-09-2026 04:54 · **UF:** 40,893.78 · **Universo barrido:** 4,711 licitaciones activas en Mercado Publico
+**Corrida:** 14-09-2026 19:30 · **UF:** 40,926.41 · **Universo barrido:** 4,546 licitaciones activas en Mercado Publico
 
 **3 matches** (1 prioridad alta, 0 nuevas). 0 cierran dentro de 7 dias.
 
@@ -34,4 +34,4 @@ El presente proceso tiene como objetivo, seleccionar mediante propuesta pública
 
 ---
 
-_Metodo: barrido del endpoint oficial `licitaciones.json?estado=activas` de api.mercadopublico.cl; prefiltro por titulo; detalle completo (descripcion, comprador, items UNSPSC, monto) de 361 candidatos; scoring por taxonomia de servicios inmobiliarios. Umbrales: RM desde UF 500.0, resto del pais desde UF 2000.0. 357 descartes quedan auditables en la hoja 'Descartes' del Excel._
+_Metodo: barrido del endpoint oficial `licitaciones.json?estado=activas` de api.mercadopublico.cl; prefiltro por titulo; detalle completo (descripcion, comprador, items UNSPSC, monto) de 346 candidatos; scoring por taxonomia de servicios inmobiliarios. Umbrales: RM desde UF 500.0, resto del pais desde UF 2000.0. 342 descartes quedan auditables en la hoja 'Descartes' del Excel._
