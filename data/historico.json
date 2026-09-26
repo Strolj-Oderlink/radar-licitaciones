@@ -71,7 +71,7 @@
  },
  "4295-54-LR26": {
   "primera_vista": "2026-08-25",
-  "ultima_vista": "2026-09-22",
+  "ultima_vista": "2026-09-26",
   "score": 55,
   "estado": "Publicada",
   "cierre": "2026-10-14 15:00",
@@ -81,11 +81,11 @@
  },
  "5358-9-LR26": {
   "primera_vista": "2026-08-25",
-  "ultima_vista": "2026-09-22",
+  "ultima_vista": "2026-09-26",
   "score": 49,
   "estado": "Publicada",
   "cierre": "2026-10-16 15:01",
-  "monto_uf": 121976.0,
+  "monto_uf": 121879.0,
   "nombre": "ADQUISICIÓN DE TERRENO PARA PROYECTO EDUCACIONAL U",
   "entidad": "Gamma"
  },
@@ -101,12 +101,22 @@
  },
  "1063538-206-I226": {
   "primera_vista": "2026-08-29",
-  "ultima_vista": "2026-09-22",
+  "ultima_vista": "2026-09-26",
   "score": 40,
   "estado": "Publicada",
   "cierre": "2026-09-28 17:00",
   "monto_uf": null,
   "nombre": "“ARRIENDO DE CELDAS DE MEDIA TENSION MT”",
   "entidad": "Realsa Brokers"
+ },
+ "2403-71-L126": {
+  "primera_vista": "2026-09-26",
+  "ultima_vista": "2026-09-26",
+  "score": 80,
+  "estado": "Publicada",
+  "cierre": "2026-10-02 15:30",
+  "monto_uf": null,
+  "nombre": "Servicio de tasación de bienes raíces municipales.",
+  "entidad": "Gamma"
  }
 }

@@ -1,10 +1,22 @@
 # Licitaciones que calzan — Gamma / Realsa Brokers
 
-**Corrida:** 22-09-2026 19:54 · **UF:** 40,991.75 · **Universo barrido:** 3,941 licitaciones activas en Mercado Publico
+**Corrida:** 26-09-2026 19:26 · **UF:** 41,024.46 · **Universo barrido:** 4,133 licitaciones activas en Mercado Publico
 
-**3 matches** (1 prioridad alta, 0 nuevas). 0 cierran dentro de 7 dias.
+**4 matches** (2 prioridad alta, 1 nuevas). 1 cierran dentro de 7 dias.
+
+## Accionables esta semana (cierre <= 7 dias)
+
+- **6d** · `2403-71-L126` · **Servicio de tasación de bienes raíces municipales.** — I MUNICIPALIDAD DE PENALOLEN (Región Metropolitana de Santiago). no publicado. → *Gamma*. [Ficha](https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2403-71-L126)
 
 ## Prioridad alta
+
+### Servicio de tasación de bienes raíces municipales.
+`2403-71-L126` · I MUNICIPALIDAD DE PENALOLEN · Región Metropolitana de Santiago · L1 · cierra 2026-10-02 15:30 (6 dias) · no publicado
+**Tipo de oportunidad:** Mandato de SERVICIO — Contratan un servicio profesional inmobiliario: postulacion directa como oferente. Verificar requisitos de experiencia y garantia de seriedad.  
+**Entidad sugerida:** Gamma — exige/pondera experiencia acreditable o es licitacion mayor  
+**Por que calza (score 80):** nucleo/titulo: tasacion (+24) | objeto/titulo: bienes raices (+16) | UNSPSC 80131800 (+40)  
+La Municipalidad de Peñalolén requiere contratar el servicio de tasación de  terrenos municipales a través de profesionales calificados del rubro, con  experiencia en la materia de avalúos en bienes raíces terrenos, con el objeto de determinar su valor estimado en el mercado actual.  
+[Ver en Mercado Publico](https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2403-71-L126)
 
 ### VENTA DE TERRENOS DE PROPIEDAD MUNICIPAL LA SERENA
 `4295-54-LR26` · ILUSTRE MUNICIPALIDAD DE LA SERENA · Región de Coquimbo · LR · cierra 2026-10-14 15:00 (51 dias) · no publicado
@@ -34,4 +46,4 @@ El presente proceso tiene como objetivo, seleccionar mediante propuesta pública
 
 ---
 
-_Metodo: barrido del endpoint oficial `licitaciones.json?estado=activas` de api.mercadopublico.cl; prefiltro por titulo; detalle completo (descripcion, comprador, items UNSPSC, monto) de 289 candidatos; scoring por taxonomia de servicios inmobiliarios. Umbrales: RM desde UF 500.0, resto del pais desde UF 2000.0. 284 descartes quedan auditables en la hoja 'Descartes' del Excel._
+_Metodo: barrido del endpoint oficial `licitaciones.json?estado=activas` de api.mercadopublico.cl; prefiltro por titulo; detalle completo (descripcion, comprador, items UNSPSC, monto) de 294 candidatos; scoring por taxonomia de servicios inmobiliarios. Umbrales: RM desde UF 500.0, resto del pais desde UF 2000.0. 290 descartes quedan auditables en la hoja 'Descartes' del Excel._
