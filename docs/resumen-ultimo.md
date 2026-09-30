@@ -1,8 +1,8 @@
 # Licitaciones que calzan — Gamma / Realsa Brokers
 
-**Corrida:** 26-09-2026 19:26 · **UF:** 41,024.46 · **Universo barrido:** 4,133 licitaciones activas en Mercado Publico
+**Corrida:** 30-09-2026 21:03 · **UF:** 41,057.20 · **Universo barrido:** 4,322 licitaciones activas en Mercado Publico
 
-**4 matches** (2 prioridad alta, 1 nuevas). 1 cierran dentro de 7 dias.
+**3 matches** (2 prioridad alta, 0 nuevas). 1 cierran dentro de 7 dias.
 
 ## Accionables esta semana (cierre <= 7 dias)
 
@@ -31,7 +31,6 @@ El presente proceso tiene como objetivo, seleccionar mediante propuesta pública
 | Score | Licitacion | Organismo | Region | Cierre | Monto | Entidad |
 |---|---|---|---|---|---|---|
 | 49 | [ADQUISICIÓN DE TERRENO PARA PROYECTO EDUCACIONAL U](https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=5358-9-LR26) | UNIVERSIDAD DE TARAPACA | Región de Tarapacá | 2026-10-16 | CLP 5,000,000,000 | Gamma |
-| 40 | [“ARRIENDO DE CELDAS DE MEDIA TENSION MT”](https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=1063538-206-I226) | HOSPITAL BASE OSORNO | Región de los Lagos | 2026-09-28 | no publicado | Realsa Brokers |
 
 ## Salieron del radar desde la ultima corrida
 
@@ -43,7 +42,8 @@ El presente proceso tiene como objetivo, seleccionar mediante propuesta pública
 - `2713-157-LP26` Servicio de arriendo - Folio 852 - DIDECO (vista por ultima vez 2026-08-29)
 - `552578-38-L126` CONCESIÓN DE LOCALES COMERCIALES PASEO SAN RAFAEL (vista por ultima vez 2026-08-25)
 - `867990-62-LE26` CDP 91352 - CC 102 — TASACIÓN DE BIENES INMUEBLES (vista por ultima vez 2026-08-29)
+- `1063538-206-I226` “ARRIENDO DE CELDAS DE MEDIA TENSION MT” (vista por ultima vez 2026-09-26)
 
 ---
 
-_Metodo: barrido del endpoint oficial `licitaciones.json?estado=activas` de api.mercadopublico.cl; prefiltro por titulo; detalle completo (descripcion, comprador, items UNSPSC, monto) de 294 candidatos; scoring por taxonomia de servicios inmobiliarios. Umbrales: RM desde UF 500.0, resto del pais desde UF 2000.0. 290 descartes quedan auditables en la hoja 'Descartes' del Excel._
+_Metodo: barrido del endpoint oficial `licitaciones.json?estado=activas` de api.mercadopublico.cl; prefiltro por titulo; detalle completo (descripcion, comprador, items UNSPSC, monto) de 304 candidatos; scoring por taxonomia de servicios inmobiliarios. Umbrales: RM desde UF 500.0, resto del pais desde UF 2000.0. 300 descartes quedan auditables en la hoja 'Descartes' del Excel._
