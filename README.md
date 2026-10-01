@@ -13,6 +13,13 @@ y avisa por WhatsApp con el link.
 
 ---
 
+## Para Claude Code
+
+`RADAR.md` tiene el contexto del proyecto; `CLAUDE.md` es una línea que lo
+importa, que es como Claude Code lo carga solo al abrir la carpeta. Contiene el
+mapa, las invariantes, cómo probar y los pendientes conocidos.
+`DOCUMENTACION.md` sigue siendo la referencia del motor de matching.
+
 ## 👉 Puesta en marcha
 
 **La guía completa paso a paso está en [`GUIA-IMPLEMENTACION.md`](GUIA-IMPLEMENTACION.md)** —
