@@ -1,22 +1,10 @@
 # Licitaciones que calzan — Gamma / Realsa Brokers
 
-**Corrida:** 30-09-2026 21:03 · **UF:** 41,057.20 · **Universo barrido:** 4,322 licitaciones activas en Mercado Publico
+**Corrida:** 04-10-2026 19:50 · **UF:** 41,089.96 · **Universo barrido:** 4,638 licitaciones activas en Mercado Publico
 
-**3 matches** (2 prioridad alta, 0 nuevas). 1 cierran dentro de 7 dias.
-
-## Accionables esta semana (cierre <= 7 dias)
-
-- **6d** · `2403-71-L126` · **Servicio de tasación de bienes raíces municipales.** — I MUNICIPALIDAD DE PENALOLEN (Región Metropolitana de Santiago). no publicado. → *Gamma*. [Ficha](https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2403-71-L126)
+**2 matches** (1 prioridad alta, 0 nuevas). 0 cierran dentro de 7 dias.
 
 ## Prioridad alta
-
-### Servicio de tasación de bienes raíces municipales.
-`2403-71-L126` · I MUNICIPALIDAD DE PENALOLEN · Región Metropolitana de Santiago · L1 · cierra 2026-10-02 15:30 (6 dias) · no publicado
-**Tipo de oportunidad:** Mandato de SERVICIO — Contratan un servicio profesional inmobiliario: postulacion directa como oferente. Verificar requisitos de experiencia y garantia de seriedad.  
-**Entidad sugerida:** Gamma — exige/pondera experiencia acreditable o es licitacion mayor  
-**Por que calza (score 80):** nucleo/titulo: tasacion (+24) | objeto/titulo: bienes raices (+16) | UNSPSC 80131800 (+40)  
-La Municipalidad de Peñalolén requiere contratar el servicio de tasación de  terrenos municipales a través de profesionales calificados del rubro, con  experiencia en la materia de avalúos en bienes raíces terrenos, con el objeto de determinar su valor estimado en el mercado actual.  
-[Ver en Mercado Publico](https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2403-71-L126)
 
 ### VENTA DE TERRENOS DE PROPIEDAD MUNICIPAL LA SERENA
 `4295-54-LR26` · ILUSTRE MUNICIPALIDAD DE LA SERENA · Región de Coquimbo · LR · cierra 2026-10-14 15:00 (51 dias) · no publicado
@@ -43,7 +31,8 @@ El presente proceso tiene como objetivo, seleccionar mediante propuesta pública
 - `552578-38-L126` CONCESIÓN DE LOCALES COMERCIALES PASEO SAN RAFAEL (vista por ultima vez 2026-08-25)
 - `867990-62-LE26` CDP 91352 - CC 102 — TASACIÓN DE BIENES INMUEBLES (vista por ultima vez 2026-08-29)
 - `1063538-206-I226` “ARRIENDO DE CELDAS DE MEDIA TENSION MT” (vista por ultima vez 2026-09-26)
+- `2403-71-L126` Servicio de tasación de bienes raíces municipales. (vista por ultima vez 2026-09-30)
 
 ---
 
-_Metodo: barrido del endpoint oficial `licitaciones.json?estado=activas` de api.mercadopublico.cl; prefiltro por titulo; detalle completo (descripcion, comprador, items UNSPSC, monto) de 304 candidatos; scoring por taxonomia de servicios inmobiliarios. Umbrales: RM desde UF 500.0, resto del pais desde UF 2000.0. 300 descartes quedan auditables en la hoja 'Descartes' del Excel._
+_Metodo: barrido del endpoint oficial `licitaciones.json?estado=activas` de api.mercadopublico.cl; prefiltro por titulo; detalle completo (descripcion, comprador, items UNSPSC, monto) de 330 candidatos; scoring por taxonomia de servicios inmobiliarios. Umbrales: RM desde UF 500.0, resto del pais desde UF 2000.0. 327 descartes quedan auditables en la hoja 'Descartes' del Excel._

@@ -1,9 +1,9 @@
 {
- "generado": "2026-09-30T21:03:41",
- "uf": 41057.2,
- "activas": 4322,
- "candidatos": 304,
- "matches": 3,
+ "generado": "2026-10-04T19:50:41",
+ "uf": 41089.96,
+ "activas": 4638,
+ "candidatos": 330,
+ "matches": 2,
  "parametros": {
   "min_rm": 500.0,
   "min_nacional": 2000.0,
@@ -13,34 +13,6 @@
   "presupuesto": 420
  },
  "filas": [
-  {
-   "Codigo": "2403-71-L126",
-   "Nombre": "Servicio de tasación de bienes raíces municipales.",
-   "Score": 80,
-   "Prioridad": "ALTA",
-   "Tipo de oportunidad": "Mandato de SERVICIO",
-   "Accion sugerida": "Contratan un servicio profesional inmobiliario: postulacion directa como oferente. Verificar requisitos de experiencia y garantia de seriedad.",
-   "Entidad sugerida": "Gamma",
-   "Razon entidad": "exige/pondera experiencia acreditable o es licitacion mayor",
-   "Organismo": "I MUNICIPALIDAD DE PENALOLEN",
-   "Unidad": "I.MUNICIPALIDAD DE PEÑALOLEN",
-   "Region": "Región Metropolitana de Santiago",
-   "Comuna": "Peñalolén",
-   "Tipo": "L1",
-   "Estado": "Publicada",
-   "Monto publicado": "no publicado",
-   "Monto UF": null,
-   "Dias al cierre": 6,
-   "Cierre": "2026-10-02 15:30",
-   "Publicacion": "2026-09-23",
-   "Descripcion": "La Municipalidad de Peñalolén requiere contratar el servicio de tasación de  terrenos municipales a través de profesionales calificados del rubro, con  experiencia en la materia de avalúos en bienes raíces terrenos, con el objeto de determinar su valor estimado en el mercado actual.",
-   "Por que calza": "nucleo/titulo: tasacion (+24) | objeto/titulo: bienes raices (+16) | UNSPSC 80131800 (+40)",
-   "Rango estimado por tipo": "< 100 UTM (~< UF 170)",
-   "Bajo umbral": "",
-   "Contacto": "Aníbal Acevedo",
-   "Email contacto": "",
-   "URL": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2403-71-L126"
-  },
   {
    "Codigo": "4295-54-LR26",
    "Nombre": "VENTA DE TERRENOS DE PROPIEDAD MUNICIPAL LA SERENA",
@@ -85,7 +57,7 @@
    "Tipo": "LR",
    "Estado": "Publicada",
    "Monto publicado": "CLP 5,000,000,000",
-   "Monto UF": 121781.0,
+   "Monto UF": 121684.0,
    "Dias al cierre": 53,
    "Cierre": "2026-10-16 15:01",
    "Publicacion": "2026-08-19",
@@ -136,8 +108,8 @@
    "motivo": "score 0 < 30"
   },
   {
-   "codigo": "1027-15-LP26",
-   "nombre": "Servicio de Mantención Reparación y Habilitación de Campamentos Móviles Talleres y Bodegas de la Administración Directa en la Provincia de Huasco Región de Atacama.",
+   "codigo": "1019-115-LE26",
+   "nombre": "MEJORAMIENTO DE OFICINAS D.G.A.",
    "score": 13,
    "motivo": "score 13 < 30"
   },
@@ -146,6 +118,12 @@
    "nombre": "Ampliación de Espacio Académico Sede Panguipulli",
    "score": 8,
    "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
+  },
+  {
+   "codigo": "1036569-15-L126",
+   "nombre": "CONTRATACIÓN DE SERVICIO DE APOYO PARA LA EJECUCIÓN TOMA DE INVENTARIO EN DEPENDENCIAS DEL SERVICIO",
+   "score": 14,
+   "motivo": "score 14 < 30"
   },
   {
    "codigo": "1039-7-LR26",
@@ -176,6 +154,12 @@
    "nombre": "REHABILITACIÓN INTEGRAL PACIENTES DEL HCM",
    "score": 6,
    "motivo": "score 6 < 30"
+  },
+  {
+   "codigo": "1057402-176-LP26",
+   "nombre": "Contratación de Servicio de Traslado de Pacientes con Movilidad Reducida del Hospital Clínico de Magallanes",
+   "score": 0,
+   "motivo": "score 0 < 30"
   },
   {
    "codigo": "1057402-178-LP26",
@@ -292,12 +276,6 @@
    "motivo": "score 0 < 30"
   },
   {
-   "codigo": "1057532-77-LE26",
-   "nombre": "“ADQUISICION DE CINTAS DE GLICEMIA CON GLUCOMETROS EN COMODATO PARA RED ASISTENCIAL APS EN CUMPLIMIENTO DE PROGRAMAS MINISTERIALES DE APS”",
-   "score": 0,
-   "motivo": "score 0 < 30"
-  },
-  {
    "codigo": "1057532-78-LP26",
    "nombre": "CONVENIO DE ADQUISICION DE KIT POINT OF CARE POC CON ARRIENDO DE EQUIPO PARA ANALISIS DE MUESTRAS SERVICIO DE SALUD OSORNO.",
    "score": 0,
@@ -322,6 +300,12 @@
    "motivo": "score 0 < 30"
   },
   {
+   "codigo": "1057975-6-LE26",
+   "nombre": "MÓDULOS PARA BODEGAS HOSPITAL DE COINCO",
+   "score": 7,
+   "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
+  },
+  {
    "codigo": "1058078-54-LP26",
    "nombre": "Medios de Contraste Radiológicos con comodato",
    "score": 0,
@@ -340,8 +324,14 @@
    "motivo": "score 19 < 30"
   },
   {
-   "codigo": "1063538-222-LE26",
-   "nombre": "SERVICIO DE ARRIENDO LÁMPARAS QUIRÚRGICAS DOBLE",
+   "codigo": "1070620-108-LP26",
+   "nombre": "PZM-SUM. TORNILLOS CANULADOS EQ COMODATO",
+   "score": 0,
+   "motivo": "score 0 < 30"
+  },
+  {
+   "codigo": "1070620-110-LP26",
+   "nombre": "VRC- SERV. DE ARRIENDO EQUIPO NEUROMONITOREO",
    "score": 0,
    "motivo": "score 0 < 30"
   },
@@ -370,8 +360,8 @@
    "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
   },
   {
-   "codigo": "1096-15-O126",
-   "nombre": "ATIF HABILITACIÓN CALLE DE RODAJE ALFA Y OBRAS ANEXAS AEROPUERTO PUNTA AREN",
+   "codigo": "1095-17-LE26",
+   "nombre": "Arriendo de dos excavadoras orugas CAD.",
    "score": 0,
    "motivo": "score 0 < 30"
   },
@@ -400,12 +390,6 @@
    "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
   },
   {
-   "codigo": "1110404-208-L126",
-   "nombre": "ADQUISICION SALIDA A TERRENO PEDAGÓGICA PARA HUMBERSTONE - SANTA LAURA PARA EL 8 Y 9 DE OCTUBRE PARA 254 PERSONAS PERTENECIENTES AL CIEF, DEL SLEPCH, ARICA",
-   "score": 9,
-   "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
-  },
-  {
    "codigo": "1160-16-LE26",
    "nombre": "8100CAMBIO DE VENTANAS TERMOPANEL OFICINAS SAG",
    "score": 16,
@@ -418,9 +402,9 @@
    "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
   },
   {
-   "codigo": "1171317-10-LP26",
-   "nombre": "CONSTRUCCIÓN SEDE SOCIAL AGRUPACIÓN DE MOTOQUEROS CHILLÁN ",
-   "score": 8,
+   "codigo": "1173263-3-LE26",
+   "nombre": "DISMINUCIÓN DE BRECHA EN BODEGA ACTIVA DE FARMACIA CVMF",
+   "score": 7,
    "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
   },
   {
@@ -430,16 +414,10 @@
    "motivo": "score 0 < 30"
   },
   {
-   "codigo": "1180730-38-LE26",
-   "nombre": "BOLSOS DE TERRENO ESPECIALIDAD CESFAM 18",
-   "score": 9,
-   "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
-  },
-  {
-   "codigo": "1186229-28-LE26",
-   "nombre": "Ropa técnica de trabajo Unidad Atención en terreno",
-   "score": 9,
-   "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
+   "codigo": "1186229-31-LE26",
+   "nombre": "SERVICIO DE HABILITACION DE ESPACIOS DE CUIDADO",
+   "score": 11,
+   "motivo": "score 11 < 30"
   },
   {
    "codigo": "1202333-89-LE26",
@@ -460,6 +438,12 @@
    "motivo": "score 10 < 30"
   },
   {
+   "codigo": "1217466-27-LP26",
+   "nombre": "Retiro embalaje y traslado de la exhibición perm",
+   "score": 0,
+   "motivo": "score 0 < 30"
+  },
+  {
    "codigo": "1220203-19-L126",
    "nombre": "“ASESORIA ELECTRICA LA INSPECCION FISCAL DE LA OBRA DE HABILITACIÓN BODEGA EDIFICIO EX MOLINERA REGIÓN DE ANTOFAGASTA, CODIGO BIP 40073549”, PROYECTO FINANCIADO CON FONDOS FNDR",
    "score": 14,
@@ -472,6 +456,12 @@
    "motivo": "score 14 < 30"
   },
   {
+   "codigo": "1233619-47-LP26",
+   "nombre": "“PROYECTO DE HABILITACIÓN EDIFICIO INSTITUCIONAL SLEP MAULE COSTA COMUNA DE CAUQUENES ",
+   "score": 14,
+   "motivo": "score 14 < 30"
+  },
+  {
    "codigo": "1237328-66-LE26",
    "nombre": "MEJORAMIENTO Y HABILITACIÓN CESFAM CARLOS IBAÑEZ",
    "score": 8,
@@ -480,6 +470,12 @@
   {
    "codigo": "1238128-5-LE26",
    "nombre": "REHABILITACIÓN Y PINTURA DE LA PISCINA PRINCIPAL T",
+   "score": 0,
+   "motivo": "score 0 < 30"
+  },
+  {
+   "codigo": "1242131-22-LP26",
+   "nombre": "Convenio de suministro de fibrobroncoscopios desechables con equipamiento y accesorios en comodato para el Hospital Provincial de Ovalle",
    "score": 0,
    "motivo": "score 0 < 30"
   },
@@ -502,18 +498,6 @@
    "motivo": "score 0 < 30"
   },
   {
-   "codigo": "1298354-27-LE26",
-   "nombre": "Conservación y Habilitación Salas y Muros",
-   "score": 0,
-   "motivo": "score 0 < 30"
-  },
-  {
-   "codigo": "1298354-28-LE26",
-   "nombre": "Suministro de Servicios de Traslados",
-   "score": 6,
-   "motivo": "score 6 < 30"
-  },
-  {
    "codigo": "1305504-16-L126",
    "nombre": "HABILITACIÓN DE OFICINA PARA CENTRAL DE CÁMARAS",
    "score": 16,
@@ -523,6 +507,12 @@
    "codigo": "1350296-86-LE26",
    "nombre": "ADQUISICIÓN DE CARPETAS PARA FICHAS CLÍNICAS PARA LA UNIDAD DE BODEGA GENERAL DEL HOSPITAL ALTO HOSPICIO",
    "score": 7,
+   "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
+  },
+  {
+   "codigo": "1353-2-LE26",
+   "nombre": "SERVICIO DE REPARACION OFICINA DE ALTO DEL CARMEN",
+   "score": 10,
    "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
   },
   {
@@ -580,18 +570,6 @@
    "motivo": "score 8 < 30"
   },
   {
-   "codigo": "1417913-129-LP26",
-   "nombre": "CONVENIO DE SUMINISTRO PARA LA PROVISIÓN INSTALACIÓN MANTENCIÓN Y REPARACIÓN DE AIRES ACONDICIONADOS PARA DEPENDENCIAS DE CORMUDESI POR 24 MESES",
-   "score": 8,
-   "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
-  },
-  {
-   "codigo": "1469-224-L126",
-   "nombre": "ARRIENDO DE TÓTEMS INTERACTIVOS PARA PROYECTO MUNDOS INFINITOS CP25-E05, UNIVERSIDAD DE TALCA",
-   "score": 0,
-   "motivo": "score 0 < 30"
-  },
-  {
    "codigo": "1469-229-L126",
    "nombre": "ARRIENDO DE SALÓN Y SERVICIO DE CENA PARA ACTIVIDAD INSTITUCIONAL, PARA 55 PERSONAS",
    "score": 0,
@@ -602,6 +580,12 @@
    "nombre": "SERVICIO INTEGRAL DE ARRIENDO DE RECINTO Y PARRILLERO, UNIVERSIDAD DE TALCA",
    "score": 17,
    "motivo": "score 17 < 30"
+  },
+  {
+   "codigo": "1469-251-L126",
+   "nombre": "“Servicio suministro de puntos de datos para la Universidad de Talca, Dirección de Tecnologías de información, nueva Oficina Servicios TI”",
+   "score": 13,
+   "motivo": "score 13 < 30"
   },
   {
    "codigo": "1477-9-LE26",
@@ -628,6 +612,12 @@
    "motivo": "score 0 < 30"
   },
   {
+   "codigo": "1487-3-LE26",
+   "nombre": "Servicio desmontaje traslado reinstalación Antena",
+   "score": 0,
+   "motivo": "score 0 < 30"
+  },
+  {
    "codigo": "1488587-34-LP26",
    "nombre": "Habilitación de un Espacio y Oficinas para la Coordinación y Vinculación de Actividades I+D+i+eCampus Andres Bello de la Universidad de La Serena",
    "score": 16,
@@ -640,20 +630,14 @@
    "motivo": "score 16 < 30"
   },
   {
-   "codigo": "1533460-6-LP26",
-   "nombre": "SERVICIO DE ARRIENDO DE SISTEMA INFORMÁTICO FINANCIERO CONTABLE Y RECURSOS HUMANOS",
+   "codigo": "1499-189-LE26",
+   "nombre": "RSS SERVICIO DE DESARMADO TRASLADO Y ARMADO DE KARDEX VERTICAL MARCA GRIFOLS MODELO SYS 12012",
    "score": 0,
    "motivo": "score 0 < 30"
   },
   {
    "codigo": "1540667-6-LR26",
    "nombre": "OBRA REMODELACIÓN SERV MED FÍSICA Y REHABILITACIÓN",
-   "score": 0,
-   "motivo": "score 0 < 30"
-  },
-  {
-   "codigo": "1549-70-LR26",
-   "nombre": "ARRIENDO DE 07 MAQUINAS DE ANESTESIA",
    "score": 0,
    "motivo": "score 0 < 30"
   },
@@ -680,6 +664,24 @@
    "nombre": "ARRIENDO INFRAESTRUCTURA DE PROCESAMIENTO Y ALMACE",
    "score": 12,
    "motivo": "score 12 < 30"
+  },
+  {
+   "codigo": "1562-67-L126",
+   "nombre": "REPARACIÓN DEL EQUIPO DE FUSIÓN PERL X-3, DEL DEPARTAMENTO LABORATORIOS",
+   "score": 5,
+   "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
+  },
+  {
+   "codigo": "1562-68-L126",
+   "nombre": "MEJORAS SALA DE ARENAS DEL DEPARTAMENTO DE LABORATORIOS",
+   "score": 5,
+   "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
+  },
+  {
+   "codigo": "1562-69-LE26",
+   "nombre": "ADQUISICIÓN DE EQUIPO TÉCNICO DE TERRENO",
+   "score": 9,
+   "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
   },
   {
    "codigo": "1574-35-LP26",
@@ -724,8 +726,26 @@
    "motivo": "score 0 < 30"
   },
   {
+   "codigo": "1658-224-LR26",
+   "nombre": "P.271-2026 CONTRATACIÓN PERSONAL DE APOYO PARA DEPARTAMENTOS DE LA DIRECCIÓN DE OPERACIONES – TEMUCO",
+   "score": 5,
+   "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
+  },
+  {
+   "codigo": "1658-236-LE26",
+   "nombre": "136-2026 “PROVISIÓN DE NUEVO MONTACARGA EDIFICIO CONSISTORIAL CON MANTENCIÓN POR 12 MESES”",
+   "score": 8,
+   "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
+  },
+  {
    "codigo": "1663-145-LE26",
    "nombre": "ARRIENDO CUNA DE PROCEDIMIENTO",
+   "score": 0,
+   "motivo": "score 0 < 30"
+  },
+  {
+   "codigo": "1663-152-LP26",
+   "nombre": "ARRIENDO DE EQUIPO ANGIO-OCT",
    "score": 0,
    "motivo": "score 0 < 30"
   },
@@ -760,16 +780,16 @@
    "motivo": "score 0 < 30"
   },
   {
+   "codigo": "1947-167-LE26",
+   "nombre": "CONTRATACIÓN DEL SERVICIO DE ARRIENDO DE ENDOSCOPIO PARA CAE DE GASTROENTEROLOGÍA DEL H. ROBERTO DEL RÍO GRS",
+   "score": 0,
+   "motivo": "score 0 < 30"
+  },
+  {
    "codigo": "1947-170-LE26",
    "nombre": "CONTRATACIÓN DEL SERVICIO DE ARRIENDO DE BODEGAS MODULARES PARA FICHAS CLÍNICAS DEL HOSPITAL DE NIÑOS DR. ROBERTO DEL RÍO. ",
    "score": 19,
    "motivo": "score 19 < 30"
-  },
-  {
-   "codigo": "1979-196-LP26",
-   "nombre": "195.26 “ARRIENDO DE CATRES CLÍNICOS PARA VARIOS SERVICIO DE CLÍNICOS DEL NODO COSTERO: HOSPITAL NVA IMPERIAL.”",
-   "score": 0,
-   "motivo": "score 0 < 30"
   },
   {
    "codigo": "2055-12-LE26",
@@ -850,6 +870,12 @@
    "motivo": "score 10 < 30"
   },
   {
+   "codigo": "2295-102-LE26",
+   "nombre": "ADQUISICIÓN DE AYUDAS TÉCNICAS PARA LA OFICINA DE LA DISCAPACIDAD Y CENTROS DE DESARROLLO SOCIAL DEPENDIENTES DE LA DIRECCIÓN DE DESARROLLO COMUNITARIO",
+   "score": 10,
+   "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
+  },
+  {
    "codigo": "2295-98-LP26",
    "nombre": "CONVENIO DE SUMINISTRO DE AUDIFONOS PARA EL PROGRAMA DE RESOLUTIVIDAD UAPORRINO DEPARTAMENTO DE SALUD TALCA",
    "score": 5,
@@ -874,12 +900,6 @@
    "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
   },
   {
-   "codigo": "2324-115-LE26",
-   "nombre": "LICITACIÓN PÚBLICA N° 96 2026 SERVICIO PLAN DE MANTENCIÓN SISTEMA DE CALEFACCIÓN Y SISTEMA DE RED DE INCENDIO CASA PAULY – DIRECCIÓN DE OPERACIONES",
-   "score": 5,
-   "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
-  },
-  {
    "codigo": "2324-118-LP26",
    "nombre": "LICITACIÓN PÚBLICA N°532026 SERVICIO DE MANTENCIÓN DE ALUMBRADO PÚBLICO PERIODO 2026 DEPARTAMENTO ELÉCTRICO MUNICIPALIDAD DE PUERTO MONTT",
    "score": 5,
@@ -892,15 +912,15 @@
    "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
   },
   {
+   "codigo": "2337-30-LR26",
+   "nombre": "COMODATO  EQUIPO AUTOMATICO DE QUIMICA MAS EQUIPO ANALIZADOR DE ORINA",
+   "score": 10,
+   "motivo": "score 10 < 30"
+  },
+  {
    "codigo": "2342-36-LR26",
    "nombre": "CONCESIÓN DE ESTACIONAMIENTOS EN CALLES DE LA ZONA CENTRO DE LA COMUNA DE SAN BERNARDO APLICANDO SISTEMA DE CONTROL DE TIEMPO DE USO CAPTADORES DE DATOS",
    "score": 5,
-   "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
-  },
-  {
-   "codigo": "2343-31-LE26",
-   "nombre": "REMODELACION DE OFICINAS EN PARQUE O´HIGGINS",
-   "score": 10,
    "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
   },
   {
@@ -922,16 +942,28 @@
    "motivo": "score 22 < 30"
   },
   {
-   "codigo": "2378-110-LP26",
-   "nombre": "ARRIENDO YO  MANTENCIÓN DE BAÑOS QUIMICOS",
+   "codigo": "2380-49-LE26",
+   "nombre": "“SERVICIO DE ARMADO Y ARRIENDO DE MÓDULOS DE ATENC",
    "score": 0,
    "motivo": "score 0 < 30"
+  },
+  {
+   "codigo": "2402-92-LE26",
+   "nombre": "CONST. AMPL. SEDE SOCIAL JJVV EL LIBERTADOR II",
+   "score": 8,
+   "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
   },
   {
    "codigo": "2405-108-LR26",
    "nombre": "HABILITACION Y URBANIZACION LOTEO ALTOS",
    "score": 6,
    "motivo": "score 6 < 30"
+  },
+  {
+   "codigo": "2408-112-LE26",
+   "nombre": "ADQUISICIÓN DE BODEGA MODULAR RESPEL",
+   "score": 7,
+   "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
   },
   {
    "codigo": "2408-242-L126",
@@ -946,22 +978,10 @@
    "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
   },
   {
-   "codigo": "2409-99-L126",
-   "nombre": "SERVICIO TRASLADO ALUMNOS TALLER EXTRAESCOLAR Y JORNADAS REFLEXION, ESCUELA D-870",
-   "score": 0,
-   "motivo": "score 0 < 30"
-  },
-  {
    "codigo": "2423-66-LE26",
    "nombre": "ARRIENDO DE DISPOSITIVOS DE GEOLOCALIZACIÓN",
    "score": 0,
    "motivo": "score 0 < 30"
-  },
-  {
-   "codigo": "2429-8-LP26",
-   "nombre": "RENOVACIÓN DE INFRAESTRUCTURA DE RED INFORMÁTICA Y NORMALIZACIÓN DE CABLEADO ESTRUCTURADO DE LAS DEPENDENCIAS DE LA IMA",
-   "score": 8,
-   "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
   },
   {
    "codigo": "2430-68-LR26",
@@ -1010,6 +1030,12 @@
    "nombre": "REPOSICIÓN SEDE COMUNITARIA EL OLIVAR COQUIMBO 2",
    "score": 11,
    "motivo": "score 11 < 30"
+  },
+  {
+   "codigo": "2460-95-LE26",
+   "nombre": "REPARACIONES EN CIDES LOS MISIONEROS Y OTROS RECINTOS ",
+   "score": 5,
+   "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
   },
   {
    "codigo": "2483-240-LP26",
@@ -1084,6 +1110,12 @@
    "motivo": "score 8 < 30"
   },
   {
+   "codigo": "2697-55-LR26",
+   "nombre": "HABILITACIÓN CASA DE OFICIOS",
+   "score": 11,
+   "motivo": "score 11 < 30"
+  },
+  {
    "codigo": "2702-66-LE26",
    "nombre": "Arriendo árboles de navidad Talagante 2026",
    "score": 0,
@@ -1094,6 +1126,12 @@
    "nombre": "HABILITACIÓN LABORATORIODE DINÁMICA VASCULAR Y MODELAMIENTO  BIOMÉDICO  UNIVERSIDAD  DEL  BÍO-BÍO SEDE CHILLÁN",
    "score": 14,
    "motivo": "score 14 < 30"
+  },
+  {
+   "codigo": "2709-62-LP26",
+   "nombre": "REPOSICIÓN SEDE SOCIAL LOS LEICES COMUNA DE OVALLE CÓDIGO BIP 40073288-0",
+   "score": 8,
+   "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
   },
   {
    "codigo": "2723-61-LR26",
@@ -1180,20 +1218,20 @@
    "motivo": "score 8 < 30"
   },
   {
-   "codigo": "3015-49-L126",
-   "nombre": "DISEÑO PROYECTO ELÉCTRICO EDIFICIO CONSISTORIAL",
-   "score": 14,
-   "motivo": "score 14 < 30"
-  },
-  {
    "codigo": "3015-56-LP26",
    "nombre": "MEJ ACCESIBILIDAD Y ENTORNO SEDE SOCIAL TERRAVIDA",
    "score": 8,
    "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
   },
   {
-   "codigo": "3085-69-L126",
-   "nombre": "PROVISIÓN E INSTALACIÓN DE PUERTAS DE ALUMINIO Y VENTANAL FIJO ACCESO LOGIA A DOS VIVIENDAS FISCALES.",
+   "codigo": "3082-10-LP26",
+   "nombre": "Construcción Sede Agrupación Yo Vivo Panquehue",
+   "score": 8,
+   "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
+  },
+  {
+   "codigo": "3085-67-LE26",
+   "nombre": "PROVISIÓN E INSTALACIÓN DE VENTANAS TERMOPANEL A 3 VV.FF POBLACIÓN ALMIRANTE BANNEN",
    "score": 0,
    "motivo": "score 0 < 30"
   },
@@ -1202,6 +1240,12 @@
    "nombre": "“ADQUISICIÓN DE FÁRMACOS OFTALMOLOGICO DESTINADOS A PACIENTES DEL PROGRAMA RESOLUTIVIDAD – COMPONENTE  ATENCIÓN PRIMARIA OFTALMOLOGICA  DE LA DIRECCIÓN DE SALUD  DE LA I. MUNICIPALIDAD DE CASABLANCA",
    "score": 5,
    "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
+  },
+  {
+   "codigo": "3095-12-L126",
+   "nombre": "REPARACIÓN INTEGRAL DE VENTANAS.",
+   "score": 0,
+   "motivo": "score 0 < 30"
   },
   {
    "codigo": "3117-95-LE26",
@@ -1234,10 +1278,46 @@
    "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
   },
   {
+   "codigo": "316-58-LE26",
+   "nombre": "ADQUISICIÓN TRANSPORTE E INSTALACIÓN DE BODEGA MODULAR PARA ALMACENAMIENTO DE SUSTANCIAS PELIGROSAS SUSPEL – PRODUCTOS INFLAMABLES",
+   "score": 7,
+   "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
+  },
+  {
+   "codigo": "3172-73-LE26",
+   "nombre": "ESTUDIO DE TERRENO ESFOCAR TEMUCO",
+   "score": 9,
+   "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
+  },
+  {
    "codigo": "3211-11-LP26",
    "nombre": "CONSTRUCCCIÓN SEDE SOCIAL SAN JOSÉ Y JUEGOS INFANT",
    "score": 8,
    "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
+  },
+  {
+   "codigo": "3253-89-L126",
+   "nombre": "ADQUISICION DE TERMOLAMINADORA PARA SER UTILIZADA POR EL DEPARTAMENTO DE TRANSITO. SEGUN TERMINOS DE REFERENCIA ADJUNTOS",
+   "score": 5,
+   "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
+  },
+  {
+   "codigo": "3320-36-LE26",
+   "nombre": "002 172585 2026 arriendo enfriador de aire",
+   "score": 0,
+   "motivo": "score 0 < 30"
+  },
+  {
+   "codigo": "3333-47-LE26",
+   "nombre": "SERVICIO DE TRASLADO PARA EQUIPO RED LOCAL 2026",
+   "score": 0,
+   "motivo": "score 0 < 30"
+  },
+  {
+   "codigo": "3336-22-LP26",
+   "nombre": "REPOSICIÓN SEDE SOCIAL PUERTO NUEVO LA UNIÓN",
+   "score": 14,
+   "motivo": "score 14 < 30"
   },
   {
    "codigo": "3375-15-LP26",
@@ -1282,28 +1362,16 @@
    "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
   },
   {
-   "codigo": "3542-26-LE26",
-   "nombre": "SERVICIO DE REMODELACIÓN DE OFICINAS DEL TALLER DE MANTENIMIENTO",
-   "score": 10,
-   "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
-  },
-  {
-   "codigo": "3568-27-L126",
-   "nombre": "SERVICIO DE TRASLADO PROFESIONALES PROGRAMA DE RED LOCAL DE APOYO Y CUIDADOS",
-   "score": 6,
-   "motivo": "score 6 < 30"
-  },
-  {
    "codigo": "3637-39-LE26",
    "nombre": "CONSTRUCCION ESCENAS CULTURALES EDIFICIO MUNICIPAL",
    "score": 8,
    "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
   },
   {
-   "codigo": "3708-40-LE26",
-   "nombre": "HABILITACION OFICINAS TRANSITO OBRAS Y OTRAS",
-   "score": 16,
-   "motivo": "score 16 < 30"
+   "codigo": "3705-35-LP26",
+   "nombre": "PROYECTO ELÉCTRICO PARA EL EDIFICIO CONSISTORIAL DE LA MUNICIPALIDAD DE LOS SAUCES",
+   "score": 8,
+   "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
   },
   {
    "codigo": "3729-86-LE26",
@@ -1330,6 +1398,12 @@
    "motivo": "score 11 < 30"
   },
   {
+   "codigo": "3794-75-LE26",
+   "nombre": "CONTRATACIÓN DEL SERVICIO DE MUDANZA NACIONAL.",
+   "score": 0,
+   "motivo": "score 0 < 30"
+  },
+  {
    "codigo": "3798-19-LR26",
    "nombre": "ADQUISICIÓN DE TERRENO DE INFRAESTRUCTURA PÚBLICA",
    "score": 9,
@@ -1342,22 +1416,16 @@
    "motivo": "score 0 < 30"
   },
   {
+   "codigo": "3836-39-LE26",
+   "nombre": "OFICINA MODULAR JUZGADO POLICIA LOCAL DE TOLTEN",
+   "score": 13,
+   "motivo": "score 13 < 30"
+  },
+  {
    "codigo": "3838-86-CO26",
    "nombre": "CONVENIO DE SUMINISTRO ADQUISICIÓN SERVICIO DE MOVILIZACIÓN PROGRAMAS DE LA DIRECCIÓN DESARROLLO COMUNITARIO Y DEPARTAMENTO GESTIÓN DE RIESGO DE DESASTRES",
    "score": 5,
    "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
-  },
-  {
-   "codigo": "3847-41-LE26",
-   "nombre": "DISEÑO PLAN MAESTRO PARQUE URBANO BAQUEDANO",
-   "score": 16,
-   "motivo": "score 16 < 30"
-  },
-  {
-   "codigo": "3849-4-LE26",
-   "nombre": "ADQUISICIÓN E INSTALACIÓN DE VENTANAS",
-   "score": 11,
-   "motivo": "score 11 < 30"
   },
   {
    "codigo": "3882-90-LE26",
@@ -1378,12 +1446,6 @@
    "motivo": "score 8 < 30"
   },
   {
-   "codigo": "3908-44-LE26",
-   "nombre": "HABILITACIÓN Y SEÑALIZACIÓN PLAZOLETA RENÉ PINEDA Y MEJORAMIENTO PLAZA POBLACIÓN NUEVO VIVIR COMUNA DE RENAICO",
-   "score": 0,
-   "motivo": "score 0 < 30"
-  },
-  {
    "codigo": "3934-41-L126",
    "nombre": "ADQUISICION DE FARMACOS PARA USO EN ESTABLECIMIENTOS DE SALUD DEL DEPARTAMENTO DE SALUD MUNICIPAL FREIRE ",
    "score": 5,
@@ -1396,8 +1458,8 @@
    "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
   },
   {
-   "codigo": "3963-16-LP26",
-   "nombre": "Mej. Sede y Multicancha Pobl.Juan Gonzalez Peumo",
+   "codigo": "3963-18-LE26",
+   "nombre": "MEJORAMIENTO SEDE EL REFUGIO COMUNA DE PEUMO",
    "score": 8,
    "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
   },
@@ -1414,16 +1476,34 @@
    "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
   },
   {
+   "codigo": "4055-82-L126",
+   "nombre": "OBRAS DE TEATRO DE LA OFICINA ARTES  Y CULTURA",
+   "score": 10,
+   "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
+  },
+  {
    "codigo": "4063-1-LP26",
    "nombre": "CONSTRUCCIÓN SEDE CLUB COLO COLO DE CUYÁN MARIQUINA",
    "score": 8,
    "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
   },
   {
+   "codigo": "4083-17-LE26",
+   "nombre": "MODULOS PARA SALA DE REHABILITACION",
+   "score": 0,
+   "motivo": "score 0 < 30"
+  },
+  {
    "codigo": "4086-49-LE26",
    "nombre": "SERVICIO ARRIENDO DE EXCAVADORA",
    "score": 0,
    "motivo": "score 0 < 30"
+  },
+  {
+   "codigo": "4113-54-LE26",
+   "nombre": "ADQ. CASACAS INSTITUCIONALES PARA MUNICIPALIDAD",
+   "score": 5,
+   "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
   },
   {
    "codigo": "411-45-LE26",
@@ -1446,6 +1526,12 @@
   {
    "codigo": "4160-14-LP26",
    "nombre": "CONSTRUCCION SEDE SOCIAL JJVV LOS NOTROS HUALPEN",
+   "score": 8,
+   "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
+  },
+  {
+   "codigo": "4160-18-LP26",
+   "nombre": "CONSTRUCCION SEDE SOCIAL JJVV FLORESTA IV HUALPEN",
    "score": 8,
    "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
   },
@@ -1486,14 +1572,20 @@
    "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
   },
   {
-   "codigo": "4295-67-LP26",
-   "nombre": "Servicio de enlace de datos voz IP y CCTV para oficinas remotas",
-   "score": 10,
-   "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
-  },
-  {
    "codigo": "4295-82-LP26",
    "nombre": "ARRIENDO INSTALACIÓN Y MANTENCIÓN DE GABINETES PSICOTÉCNICOS 2026-2029",
+   "score": 0,
+   "motivo": "score 0 < 30"
+  },
+  {
+   "codigo": "4451-112-LE26",
+   "nombre": "SERVICIO DE ARRIENDO DE BAÑOS QUIMICOS",
+   "score": 0,
+   "motivo": "score 0 < 30"
+  },
+  {
+   "codigo": "4454-30-LE26",
+   "nombre": "SERVICO DE TRASLADO - PROGRAMA SOCIAL",
    "score": 0,
    "motivo": "score 0 < 30"
   },
@@ -1514,12 +1606,6 @@
    "nombre": "TRANSPORTE-CONTRATISTAS Y ARRIENDO MAQ FORESTAL",
    "score": 0,
    "motivo": "score 0 < 30"
-  },
-  {
-   "codigo": "4686-30-LE26",
-   "nombre": "Servicio de arrendamiento de bodegas",
-   "score": 19,
-   "motivo": "score 19 < 30"
   },
   {
    "codigo": "4803-29-LP26",
@@ -1570,6 +1656,12 @@
    "motivo": "score 0 < 30"
   },
   {
+   "codigo": "5056-121-LE26",
+   "nombre": "ARRIENDO DE INCUBADORA DE TRANSPORTE",
+   "score": 0,
+   "motivo": "score 0 < 30"
+  },
+  {
    "codigo": "507428-115-LP26",
    "nombre": "ADQUISICIÓN DE EQUIPOS DE REHABILITACIÓN NHA",
    "score": 0,
@@ -1615,6 +1707,12 @@
    "codigo": "539119-91-LE26",
    "nombre": "SERVICIO DE MANTENCIÓN PREVENTIVA MENSUAL DE SALAS DE BOMBAS DE AGUA POTABLE Y AGUAS SERVIDAS DE DIFERENTES CONJUNTOS HABITACIONALES DE LA REGION METROPOLITANA ADMINISTRADOS POR EL DEPARTAMENTO GESTIÓN DE VIVIENDA Y POBLACIONES B.4.",
    "score": 5,
+   "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
+  },
+  {
+   "codigo": "5413-79-LR26",
+   "nombre": "EDIFICIO MÓDULO EDUCACIONAL CARRERA DE AGRONOMÍA",
+   "score": 8,
    "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
   },
   {
@@ -1708,6 +1806,12 @@
    "motivo": "score 11 < 30"
   },
   {
+   "codigo": "5877-38-L126",
+   "nombre": "SEREMI DE LOS RÍOS REQUIERE LA ADQUISICIÓN DE ARTÍCULOS Y HERRAMIENTAS PARA LA HABILITACIÓN DE LA SALA DE MAESTRANZA DEL EDIFICIO CECREA VALDIVIA.",
+   "score": 14,
+   "motivo": "score 14 < 30"
+  },
+  {
    "codigo": "591-33-LP26",
    "nombre": "HABILITACIÓN PISO 7 – OFICINAS Y SALA MULTIUSO PARA EL FONASA",
    "score": 16,
@@ -1720,8 +1824,8 @@
    "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
   },
   {
-   "codigo": "614795-7-LE26",
-   "nombre": "Inventario de Emisiones art 73 DS 18-23",
+   "codigo": "605-19-LR26",
+   "nombre": "SERVICIO DE ARRIENDO A CINCO AÑOS DEL SISTEMA DE A",
    "score": 0,
    "motivo": "score 0 < 30"
   },
@@ -1742,6 +1846,12 @@
    "nombre": "CONSTRUCCIÓN EDIFICIO INSTITUCIONAL MINVU MAGALLANES Y ANTÁRTICA CHILENA",
    "score": 8,
    "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
+  },
+  {
+   "codigo": "643-35-LE26",
+   "nombre": "TRASLADO FUNCIONARIOS SECTORES RECONSTRUCCIÓN 2F",
+   "score": 0,
+   "motivo": "score 0 < 30"
   },
   {
    "codigo": "653-15-O126",
@@ -1828,6 +1938,12 @@
    "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
   },
   {
+   "codigo": "813-115-LE26",
+   "nombre": "PP 112.2026 ARRIENDO GESTOR DE FILAS PARA EL ISP",
+   "score": 0,
+   "motivo": "score 0 < 30"
+  },
+  {
    "codigo": "813-35-LP26",
    "nombre": "PP 47-2026 Reactivos Departamento Salud Ambiental",
    "score": 5,
@@ -1864,14 +1980,8 @@
    "motivo": "score 0 < 30"
   },
   {
-   "codigo": "886954-294-LP26",
-   "nombre": "Conv. Suministro Prótesis Para U. Medicina Fisica y Rehabilitación del HGGB",
-   "score": 0,
-   "motivo": "score 0 < 30"
-  },
-  {
-   "codigo": "886954-298-LP26",
-   "nombre": "Convenio Suministro de Cataratas con Equipos en Comodatos",
+   "codigo": "886954-300-LP26",
+   "nombre": "Convenio Suministro Lentes Intraoculares con Equipos en Comodato ",
    "score": 0,
    "motivo": "score 0 < 30"
   },
@@ -1888,10 +1998,10 @@
    "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
   },
   {
-   "codigo": "900-45-LP26",
-   "nombre": "Servicio de Habilitación sala UHCIP ",
-   "score": 6,
-   "motivo": "score 6 < 30"
+   "codigo": "899-44-LE26",
+   "nombre": "“Servicio de arriendo de equipos informáticos por un período de 36 meses para Hospital Familiar y Comunitario San José de Casablanca”",
+   "score": 17,
+   "motivo": "score 17 < 30"
   },
   {
    "codigo": "900-62-L126",
@@ -1900,10 +2010,22 @@
    "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
   },
   {
+   "codigo": "905-34-LE26",
+   "nombre": "CAMBIO RED ELÉCTRICA OFICINA SECTORIAL SAN FDO.",
+   "score": 10,
+   "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
+  },
+  {
    "codigo": "928-27-LR26",
    "nombre": "SERVICIO DE ARRENDAMIENTO DE PERIMETROS FREESTANDING",
    "score": 0,
    "motivo": "score 0 < 30"
+  },
+  {
+   "codigo": "932-28-L126",
+   "nombre": "CONTRATACION DEL SERVICIO DE MANTENCIÓN Y REPARACION DE EDIFICACION DEL COMPLEJO DEPORTIVO HERMOGENES LIZANA, DEL INSTITUTONACIONAL DE DEPORTES DE O¨HIGGINS.",
+   "score": 8,
+   "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
   },
   {
    "codigo": "935-25-LP26",
@@ -1924,8 +2046,20 @@
    "motivo": "score 0 < 30"
   },
   {
+   "codigo": "956-60-LE26",
+   "nombre": "Contratación de los servicios de habilitación de sistema de ventilación en oficinas de Decomiso",
+   "score": 16,
+   "motivo": "score 16 < 30"
+  },
+  {
    "codigo": "979-57-L126",
    "nombre": " Adquisición de hojas prepicadas y formularios de denuncios para el Departamento de Pesaje de la Dirección de Vialidad",
+   "score": 5,
+   "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
+  },
+  {
+   "codigo": "979-61-LE26",
+   "nombre": "Adquisición de materiales yo accesorios para Sala de Geotecnia del Departamento Laboratorio Nacional de la Dirección de Vialidad",
    "score": 5,
    "motivo": "solo mencion de inmueble, sin servicio inmobiliario"
   }
