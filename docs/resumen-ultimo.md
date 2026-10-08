@@ -1,10 +1,18 @@
 # Licitaciones que calzan — Gamma / Realsa Brokers
 
-**Corrida:** 04-10-2026 19:50 · **UF:** 41,089.96 · **Universo barrido:** 4,638 licitaciones activas en Mercado Publico
+**Corrida:** 08-10-2026 06:18 · **UF:** 41,122.74 · **Universo barrido:** 4,689 licitaciones activas en Mercado Publico
 
-**2 matches** (1 prioridad alta, 0 nuevas). 0 cierran dentro de 7 dias.
+**3 matches** (2 prioridad alta, 1 nuevas). 0 cierran dentro de 7 dias.
 
 ## Prioridad alta
+
+### CONCESIÓN DE LOCALES COMERCIALES PASEO SAN RAFAEL SEGUNDO LLAMADO
+`552578-51-L126` · I MUNICIPALIDAD DE SAN RAFAEL · Región del Maule · L1 · cierra 2026-10-30 18:00 (22 dias) · no publicado
+**Tipo de oportunidad:** Estado OFRECE inmueble — El organismo vende o concesiona un activo: oportunidad de representar comprador/operador o de asesorar el proceso. Revisar bases y valor minimo.  
+**Entidad sugerida:** Realsa Brokers — proceso menor o sin ponderacion fuerte de experiencia  
+**Por que calza (score 56):** objeto/titulo: locales comerciales (+10) | transaccion/desc: arriendo (+6) | UNSPSC 80131500 (+40)  
+Con la intención de fomentar el desarrollo productivo y la participación local de los emprendedores de la comuna de San Rafael, se abre la convocatoria para entregar en arriendo 8 locales comerciales del espacio llamado ‘‘Paseo San Rafael’’, con la finalidad de que dicha comercialización sea de productos de interés para la comunidad. Según Bases Administrativas. SEGUNDO LLAMADO  
+[Ver en Mercado Publico](https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=552578-51-L126)
 
 ### VENTA DE TERRENOS DE PROPIEDAD MUNICIPAL LA SERENA
 `4295-54-LR26` · ILUSTRE MUNICIPALIDAD DE LA SERENA · Región de Coquimbo · LR · cierra 2026-10-14 15:00 (51 dias) · no publicado
@@ -35,4 +43,4 @@ El presente proceso tiene como objetivo, seleccionar mediante propuesta pública
 
 ---
 
-_Metodo: barrido del endpoint oficial `licitaciones.json?estado=activas` de api.mercadopublico.cl; prefiltro por titulo; detalle completo (descripcion, comprador, items UNSPSC, monto) de 330 candidatos; scoring por taxonomia de servicios inmobiliarios. Umbrales: RM desde UF 500.0, resto del pais desde UF 2000.0. 327 descartes quedan auditables en la hoja 'Descartes' del Excel._
+_Metodo: barrido del endpoint oficial `licitaciones.json?estado=activas` de api.mercadopublico.cl; prefiltro por titulo; detalle completo (descripcion, comprador, items UNSPSC, monto) de 334 candidatos; scoring por taxonomia de servicios inmobiliarios. Umbrales: RM desde UF 500.0, resto del pais desde UF 2000.0. 331 descartes quedan auditables en la hoja 'Descartes' del Excel._
