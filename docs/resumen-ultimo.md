@@ -1,8 +1,8 @@
 # Licitaciones que calzan — Gamma / Realsa Brokers
 
-**Corrida:** 08-10-2026 06:18 · **UF:** 41,122.74 · **Universo barrido:** 4,689 licitaciones activas en Mercado Publico
+**Corrida:** 12-10-2026 22:12 · **UF:** 40,864.55 · **Universo barrido:** 5,066 licitaciones activas en Mercado Publico
 
-**3 matches** (2 prioridad alta, 1 nuevas). 0 cierran dentro de 7 dias.
+**4 matches** (2 prioridad alta, 1 nuevas). 0 cierran dentro de 7 dias.
 
 ## Prioridad alta
 
@@ -26,6 +26,7 @@ El presente proceso tiene como objetivo, seleccionar mediante propuesta pública
 
 | Score | Licitacion | Organismo | Region | Cierre | Monto | Entidad |
 |---|---|---|---|---|---|---|
+| 49 | [ADQUISICION COMPRA TERRENO CESFAM COMUNA CABILDO](https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=3621-59-LR26) | I MUNICIPALIDAD DE CABILDO | Región de Valparaíso | 2026-11-09 | no publicado | Gamma |
 | 49 | [ADQUISICIÓN DE TERRENO PARA PROYECTO EDUCACIONAL U](https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=5358-9-LR26) | UNIVERSIDAD DE TARAPACA | Región de Tarapacá | 2026-10-16 | CLP 5,000,000,000 | Gamma |
 
 ## Salieron del radar desde la ultima corrida
@@ -43,4 +44,4 @@ El presente proceso tiene como objetivo, seleccionar mediante propuesta pública
 
 ---
 
-_Metodo: barrido del endpoint oficial `licitaciones.json?estado=activas` de api.mercadopublico.cl; prefiltro por titulo; detalle completo (descripcion, comprador, items UNSPSC, monto) de 334 candidatos; scoring por taxonomia de servicios inmobiliarios. Umbrales: RM desde UF 500.0, resto del pais desde UF 2000.0. 331 descartes quedan auditables en la hoja 'Descartes' del Excel._
+_Metodo: barrido del endpoint oficial `licitaciones.json?estado=activas` de api.mercadopublico.cl; prefiltro por titulo; detalle completo (descripcion, comprador, items UNSPSC, monto) de 371 candidatos; scoring por taxonomia de servicios inmobiliarios. Umbrales: RM desde UF 500.0, resto del pais desde UF 2000.0. 366 descartes quedan auditables en la hoja 'Descartes' del Excel._

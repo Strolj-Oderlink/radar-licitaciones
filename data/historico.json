@@ -71,7 +71,7 @@
  },
  "4295-54-LR26": {
   "primera_vista": "2026-08-25",
-  "ultima_vista": "2026-10-08",
+  "ultima_vista": "2026-10-12",
   "score": 55,
   "estado": "Publicada",
   "cierre": "2026-10-14 15:00",
@@ -81,11 +81,11 @@
  },
  "5358-9-LR26": {
   "primera_vista": "2026-08-25",
-  "ultima_vista": "2026-10-08",
+  "ultima_vista": "2026-10-12",
   "score": 49,
   "estado": "Publicada",
   "cierre": "2026-10-16 15:01",
-  "monto_uf": 121587.0,
+  "monto_uf": 122355.0,
   "nombre": "ADQUISICIÓN DE TERRENO PARA PROYECTO EDUCACIONAL U",
   "entidad": "Gamma"
  },
@@ -121,12 +121,22 @@
  },
  "552578-51-L126": {
   "primera_vista": "2026-10-08",
-  "ultima_vista": "2026-10-08",
+  "ultima_vista": "2026-10-12",
   "score": 56,
   "estado": "Publicada",
   "cierre": "2026-10-30 18:00",
   "monto_uf": null,
   "nombre": "CONCESIÓN DE LOCALES COMERCIALES PASEO SAN RAFAEL SEGUNDO LLAMADO",
   "entidad": "Realsa Brokers"
+ },
+ "3621-59-LR26": {
+  "primera_vista": "2026-10-12",
+  "ultima_vista": "2026-10-12",
+  "score": 49,
+  "estado": "Publicada",
+  "cierre": "2026-11-09 16:00",
+  "monto_uf": null,
+  "nombre": "ADQUISICION COMPRA TERRENO CESFAM COMUNA CABILDO",
+  "entidad": "Gamma"
  }
 }
