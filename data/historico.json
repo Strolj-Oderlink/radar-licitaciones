@@ -121,7 +121,7 @@
  },
  "552578-51-L126": {
   "primera_vista": "2026-10-08",
-  "ultima_vista": "2026-10-20",
+  "ultima_vista": "2026-10-24",
   "score": 56,
   "estado": "Publicada",
   "cierre": "2026-10-30 18:00",
@@ -131,12 +131,22 @@
  },
  "3621-59-LR26": {
   "primera_vista": "2026-10-12",
-  "ultima_vista": "2026-10-20",
+  "ultima_vista": "2026-10-24",
   "score": 49,
   "estado": "Publicada",
   "cierre": "2026-11-09 16:00",
   "monto_uf": null,
   "nombre": "ADQUISICION COMPRA TERRENO CESFAM COMUNA CABILDO",
   "entidad": "Gamma"
+ },
+ "4142-10-LE26": {
+  "primera_vista": "2026-10-24",
+  "ultima_vista": "2026-10-24",
+  "score": 66,
+  "estado": "Publicada",
+  "cierre": "2026-10-30 12:00",
+  "monto_uf": null,
+  "nombre": "CONTRATACION ARRIENDO INMUEBLE",
+  "entidad": "Realsa Brokers"
  }
 }

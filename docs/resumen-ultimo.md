@@ -1,10 +1,22 @@
 # Licitaciones que calzan — Gamma / Realsa Brokers
 
-**Corrida:** 20-10-2026 20:10 · **UF:** 40,864.55 · **Universo barrido:** 4,641 licitaciones activas en Mercado Publico
+**Corrida:** 24-10-2026 19:05 · **UF:** 41,210.47 · **Universo barrido:** 5,141 licitaciones activas en Mercado Publico
 
-**2 matches** (1 prioridad alta, 0 nuevas). 0 cierran dentro de 7 dias.
+**3 matches** (2 prioridad alta, 1 nuevas). 1 cierran dentro de 7 dias.
+
+## Accionables esta semana (cierre <= 7 dias)
+
+- **6d** · `4142-10-LE26` · **CONTRATACION ARRIENDO INMUEBLE** — I MUNICIPALIDAD DE PALMILLA (Región del Libertador General Bernardo O´Higgins). no publicado. → *Realsa Brokers*. [Ficha](https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=4142-10-LE26)
 
 ## Prioridad alta
+
+### CONTRATACION ARRIENDO INMUEBLE
+`4142-10-LE26` · I MUNICIPALIDAD DE PALMILLA · Región del Libertador General Bernardo O´Higgins · LE · cierra 2026-10-30 12:00 (6 dias) · no publicado
+**Tipo de oportunidad:** Estado BUSCA inmueble — El organismo demanda un inmueble en arriendo o compra: oportunidad de colocar una propiedad de cartera o de representar al propietario. Confirmar si las bases admiten a un corredor como oferente o exigen al titular del dominio.  
+**Entidad sugerida:** Realsa Brokers — proceso menor o sin ponderacion fuerte de experiencia  
+**Por que calza (score 66):** objeto/titulo: inmueble (+14) | transaccion: arriendo (+12) | UNSPSC 80131500 (+40)  
+Contratación de servicio de arriendo de un inmueble (terreno) destinado para la unidad Otorrinolaringológica de la comuna de Palmilla.  
+[Ver en Mercado Publico](https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=4142-10-LE26)
 
 ### CONCESIÓN DE LOCALES COMERCIALES PASEO SAN RAFAEL SEGUNDO LLAMADO
 `552578-51-L126` · I MUNICIPALIDAD DE SAN RAFAEL · Región del Maule · L1 · cierra 2026-10-30 18:00 (22 dias) · no publicado
@@ -37,4 +49,4 @@ Con la intención de fomentar el desarrollo productivo y la participación local
 
 ---
 
-_Metodo: barrido del endpoint oficial `licitaciones.json?estado=activas` de api.mercadopublico.cl; prefiltro por titulo; detalle completo (descripcion, comprador, items UNSPSC, monto) de 351 candidatos; scoring por taxonomia de servicios inmobiliarios. Umbrales: RM desde UF 500.0, resto del pais desde UF 2000.0. 347 descartes quedan auditables en la hoja 'Descartes' del Excel._
+_Metodo: barrido del endpoint oficial `licitaciones.json?estado=activas` de api.mercadopublico.cl; prefiltro por titulo; detalle completo (descripcion, comprador, items UNSPSC, monto) de 398 candidatos; scoring por taxonomia de servicios inmobiliarios. Umbrales: RM desde UF 500.0, resto del pais desde UF 2000.0. 393 descartes quedan auditables en la hoja 'Descartes' del Excel._
