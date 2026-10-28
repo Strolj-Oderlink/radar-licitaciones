@@ -1,8 +1,8 @@
 # Licitaciones que calzan — Gamma / Realsa Brokers
 
-**Corrida:** 24-10-2026 19:05 · **UF:** 41,210.47 · **Universo barrido:** 5,141 licitaciones activas en Mercado Publico
+**Corrida:** 28-10-2026 21:22 · **UF:** 41,231.70 · **Universo barrido:** 5,000 licitaciones activas en Mercado Publico
 
-**3 matches** (2 prioridad alta, 1 nuevas). 1 cierran dentro de 7 dias.
+**6 matches** (5 prioridad alta, 3 nuevas). 1 cierran dentro de 7 dias.
 
 ## Accionables esta semana (cierre <= 7 dias)
 
@@ -17,6 +17,30 @@
 **Por que calza (score 66):** objeto/titulo: inmueble (+14) | transaccion: arriendo (+12) | UNSPSC 80131500 (+40)  
 Contratación de servicio de arriendo de un inmueble (terreno) destinado para la unidad Otorrinolaringológica de la comuna de Palmilla.  
 [Ver en Mercado Publico](https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=4142-10-LE26)
+
+### CONTRATO ARRIENDO INMUEBLE RAYEN
+`2495-25-LE26` · I MUNICIPALIDAD DE COYHAIQUE · Región Aysén del General Carlos Ibáñez del Campo · LE · cierra 2026-11-06 15:00 (9 dias) · no publicado
+**Tipo de oportunidad:** Estado BUSCA inmueble — El organismo demanda un inmueble en arriendo o compra: oportunidad de colocar una propiedad de cartera o de representar al propietario. Confirmar si las bases admiten a un corredor como oferente o exigen al titular del dominio.  
+**Entidad sugerida:** Realsa Brokers — proceso menor o sin ponderacion fuerte de experiencia  
+**Por que calza (score 66):** objeto/titulo: inmueble (+14) | transaccion: arriendo (+12) | UNSPSC 80131500 (+40)  
+La Ilustre Municipalidad de Coyhaique, a través de la Dirección de Desarrollo Comunitario DIDECO, llama a licitación pública para CONTRATO DE ARRIENDO DE INMUEBLE PARA OFICINAS ADMINISTRATIVAS DEL CENTRO RAYEN Y UN ESPACIO RESIDENCIAL, PARA LA RESIDENCIA TRANSITORIA, con el objetivo de seleccionar al proveedor que, de acuerdo con las presentes bases de licitación, deberá arrendar el inmueble solic  
+[Ver en Mercado Publico](https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2495-25-LE26)
+
+### ARRIENDO INMUEBLE OFICINA COMUNAL DISCAPACIDAD.
+`4022-22-LE26` · ILUSTRE MUNICIPALIDAD DE PUTRE · Región de Arica y Parinacota · LE · cierra 2026-11-09 15:34 (12 dias) · no publicado
+**Tipo de oportunidad:** Estado BUSCA inmueble — El organismo demanda un inmueble en arriendo o compra: oportunidad de colocar una propiedad de cartera o de representar al propietario. Confirmar si las bases admiten a un corredor como oferente o exigen al titular del dominio.  
+**Entidad sugerida:** Realsa Brokers — proceso menor o sin ponderacion fuerte de experiencia  
+**Por que calza (score 66):** objeto/titulo: inmueble (+14) | transaccion: arriendo (+12) | UNSPSC 80131500 (+40)  
+ARRIENDO DE UN INMUEBLE DESTINADO AL FUNCIONAMIENTO DE LA OFICINA COMUNAL DE DISCAPACIDAD Y SUS PROGRAMAS ASOCIADOS, PERIODO 2026-2027.  
+[Ver en Mercado Publico](https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=4022-22-LE26)
+
+### CONTRATO DE ARRIENDO INMUEBLE PARA PAI-HCM
+`1080623-3-LE26` · HOSPITAL DE MEJILLONES · Región de Antofagasta · LE · cierra 2026-11-12 20:00 (15 dias) · no publicado
+**Tipo de oportunidad:** Estado BUSCA inmueble — El organismo demanda un inmueble en arriendo o compra: oportunidad de colocar una propiedad de cartera o de representar al propietario. Confirmar si las bases admiten a un corredor como oferente o exigen al titular del dominio.  
+**Entidad sugerida:** Realsa Brokers — proceso menor o sin ponderacion fuerte de experiencia  
+**Por que calza (score 66):** objeto/titulo: inmueble (+14) | transaccion: arriendo (+12) | UNSPSC 80131500 (+40)  
+El Hospital de Mejillones requiere realizar el arrendamiento de un inmueble que permita otorgar las atenciones consideradas en la Cartera de Prestaciones dependientes del Programa Ambulatorio Intensivo de Alcohol y Drogas PAI.  
+[Ver en Mercado Publico](https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=1080623-3-LE26)
 
 ### CONCESIÓN DE LOCALES COMERCIALES PASEO SAN RAFAEL SEGUNDO LLAMADO
 `552578-51-L126` · I MUNICIPALIDAD DE SAN RAFAEL · Región del Maule · L1 · cierra 2026-10-30 18:00 (22 dias) · no publicado
@@ -49,4 +73,4 @@ Con la intención de fomentar el desarrollo productivo y la participación local
 
 ---
 
-_Metodo: barrido del endpoint oficial `licitaciones.json?estado=activas` de api.mercadopublico.cl; prefiltro por titulo; detalle completo (descripcion, comprador, items UNSPSC, monto) de 398 candidatos; scoring por taxonomia de servicios inmobiliarios. Umbrales: RM desde UF 500.0, resto del pais desde UF 2000.0. 393 descartes quedan auditables en la hoja 'Descartes' del Excel._
+_Metodo: barrido del endpoint oficial `licitaciones.json?estado=activas` de api.mercadopublico.cl; prefiltro por titulo; detalle completo (descripcion, comprador, items UNSPSC, monto) de 391 candidatos; scoring por taxonomia de servicios inmobiliarios. Umbrales: RM desde UF 500.0, resto del pais desde UF 2000.0. 384 descartes quedan auditables en la hoja 'Descartes' del Excel._

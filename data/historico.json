@@ -121,7 +121,7 @@
  },
  "552578-51-L126": {
   "primera_vista": "2026-10-08",
-  "ultima_vista": "2026-10-24",
+  "ultima_vista": "2026-10-28",
   "score": 56,
   "estado": "Publicada",
   "cierre": "2026-10-30 18:00",
@@ -131,7 +131,7 @@
  },
  "3621-59-LR26": {
   "primera_vista": "2026-10-12",
-  "ultima_vista": "2026-10-24",
+  "ultima_vista": "2026-10-28",
   "score": 49,
   "estado": "Publicada",
   "cierre": "2026-11-09 16:00",
@@ -141,12 +141,42 @@
  },
  "4142-10-LE26": {
   "primera_vista": "2026-10-24",
-  "ultima_vista": "2026-10-24",
+  "ultima_vista": "2026-10-28",
   "score": 66,
   "estado": "Publicada",
   "cierre": "2026-10-30 12:00",
   "monto_uf": null,
   "nombre": "CONTRATACION ARRIENDO INMUEBLE",
+  "entidad": "Realsa Brokers"
+ },
+ "2495-25-LE26": {
+  "primera_vista": "2026-10-28",
+  "ultima_vista": "2026-10-28",
+  "score": 66,
+  "estado": "Publicada",
+  "cierre": "2026-11-06 15:00",
+  "monto_uf": null,
+  "nombre": "CONTRATO ARRIENDO INMUEBLE RAYEN",
+  "entidad": "Realsa Brokers"
+ },
+ "4022-22-LE26": {
+  "primera_vista": "2026-10-28",
+  "ultima_vista": "2026-10-28",
+  "score": 66,
+  "estado": "Publicada",
+  "cierre": "2026-11-09 15:34",
+  "monto_uf": null,
+  "nombre": "ARRIENDO INMUEBLE OFICINA COMUNAL DISCAPACIDAD.",
+  "entidad": "Realsa Brokers"
+ },
+ "1080623-3-LE26": {
+  "primera_vista": "2026-10-28",
+  "ultima_vista": "2026-10-28",
+  "score": 66,
+  "estado": "Publicada",
+  "cierre": "2026-11-12 20:00",
+  "monto_uf": null,
+  "nombre": "CONTRATO DE ARRIENDO INMUEBLE PARA PAI-HCM",
   "entidad": "Realsa Brokers"
  }
 }
