@@ -1,26 +1,10 @@
 # Licitaciones que calzan — Gamma / Realsa Brokers
 
-**Corrida:** 05-11-2026 07:04 · **UF:** 41,274.20 · **Universo barrido:** 5,139 licitaciones activas en Mercado Publico
+**Corrida:** 09-11-2026 23:33 · **UF:** 41,295.46 · **Universo barrido:** 4,901 licitaciones activas en Mercado Publico
 
-**5 matches** (4 prioridad alta, 0 nuevas). 0 cierran dentro de 7 dias.
+**2 matches** (2 prioridad alta, 0 nuevas). 0 cierran dentro de 7 dias.
 
 ## Prioridad alta
-
-### CONTRATO ARRIENDO INMUEBLE RAYEN
-`2495-25-LE26` · I MUNICIPALIDAD DE COYHAIQUE · Región Aysén del General Carlos Ibáñez del Campo · LE · cierra 2026-11-06 15:00 (9 dias) · no publicado
-**Tipo de oportunidad:** Estado BUSCA inmueble — El organismo demanda un inmueble en arriendo o compra: oportunidad de colocar una propiedad de cartera o de representar al propietario. Confirmar si las bases admiten a un corredor como oferente o exigen al titular del dominio.  
-**Entidad sugerida:** Realsa Brokers — proceso menor o sin ponderacion fuerte de experiencia  
-**Por que calza (score 66):** objeto/titulo: inmueble (+14) | transaccion: arriendo (+12) | UNSPSC 80131500 (+40)  
-La Ilustre Municipalidad de Coyhaique, a través de la Dirección de Desarrollo Comunitario DIDECO, llama a licitación pública para CONTRATO DE ARRIENDO DE INMUEBLE PARA OFICINAS ADMINISTRATIVAS DEL CENTRO RAYEN Y UN ESPACIO RESIDENCIAL, PARA LA RESIDENCIA TRANSITORIA, con el objetivo de seleccionar al proveedor que, de acuerdo con las presentes bases de licitación, deberá arrendar el inmueble solic  
-[Ver en Mercado Publico](https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2495-25-LE26)
-
-### ARRIENDO INMUEBLE OFICINA COMUNAL DISCAPACIDAD.
-`4022-22-LE26` · ILUSTRE MUNICIPALIDAD DE PUTRE · Región de Arica y Parinacota · LE · cierra 2026-11-09 15:34 (12 dias) · no publicado
-**Tipo de oportunidad:** Estado BUSCA inmueble — El organismo demanda un inmueble en arriendo o compra: oportunidad de colocar una propiedad de cartera o de representar al propietario. Confirmar si las bases admiten a un corredor como oferente o exigen al titular del dominio.  
-**Entidad sugerida:** Realsa Brokers — proceso menor o sin ponderacion fuerte de experiencia  
-**Por que calza (score 66):** objeto/titulo: inmueble (+14) | transaccion: arriendo (+12) | UNSPSC 80131500 (+40)  
-ARRIENDO DE UN INMUEBLE DESTINADO AL FUNCIONAMIENTO DE LA OFICINA COMUNAL DE DISCAPACIDAD Y SUS PROGRAMAS ASOCIADOS, PERIODO 2026-2027.  
-[Ver en Mercado Publico](https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=4022-22-LE26)
 
 ### CONTRATO DE ARRIENDO INMUEBLE PARA PAI-HCM
 `1080623-3-LE26` · HOSPITAL DE MEJILLONES · Región de Antofagasta · LE · cierra 2026-11-12 20:00 (15 dias) · no publicado
@@ -38,12 +22,6 @@ El Hospital de Mejillones requiere realizar el arrendamiento de un inmueble que 
 Con la intención de fomentar el desarrollo productivo y la participación local de los emprendedores de la comuna de San Rafael, se abre la convocatoria para entregar en arriendo 8 locales comerciales del espacio llamado ‘‘Paseo San Rafael’’, con la finalidad de que dicha comercialización sea de productos de interés para la comunidad. Según Bases Administrativas. SEGUNDO LLAMADO  
 [Ver en Mercado Publico](https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=552578-51-L126)
 
-## Prioridad media — revisar por excepcion
-
-| Score | Licitacion | Organismo | Region | Cierre | Monto | Entidad |
-|---|---|---|---|---|---|---|
-| 49 | [ADQUISICION COMPRA TERRENO CESFAM COMUNA CABILDO](https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=3621-59-LR26) | I MUNICIPALIDAD DE CABILDO | Región de Valparaíso | 2026-11-09 | no publicado | Gamma |
-
 ## Salieron del radar desde la ultima corrida
 
 - `3994-21-L126` SERVICIO DE TASACION COMERCIAL DE INMUEBLE (vista por ultima vez 2026-08-25)
@@ -58,8 +36,10 @@ Con la intención de fomentar el desarrollo productivo y la participación local
 - `867990-62-LE26` CDP 91352 - CC 102 — TASACIÓN DE BIENES INMUEBLES (vista por ultima vez 2026-08-29)
 - `1063538-206-I226` “ARRIENDO DE CELDAS DE MEDIA TENSION MT” (vista por ultima vez 2026-09-26)
 - `2403-71-L126` Servicio de tasación de bienes raíces municipales. (vista por ultima vez 2026-09-30)
+- `3621-59-LR26` ADQUISICION COMPRA TERRENO CESFAM COMUNA CABILDO (vista por ultima vez 2026-11-05)
 - `4142-10-LE26` CONTRATACION ARRIENDO INMUEBLE (vista por ultima vez 2026-10-28)
+- `2495-25-LE26` CONTRATO ARRIENDO INMUEBLE RAYEN (vista por ultima vez 2026-11-05)
 
 ---
 
-_Metodo: barrido del endpoint oficial `licitaciones.json?estado=activas` de api.mercadopublico.cl; prefiltro por titulo; detalle completo (descripcion, comprador, items UNSPSC, monto) de 400 candidatos; scoring por taxonomia de servicios inmobiliarios. Umbrales: RM desde UF 500.0, resto del pais desde UF 2000.0. 393 descartes quedan auditables en la hoja 'Descartes' del Excel._
+_Metodo: barrido del endpoint oficial `licitaciones.json?estado=activas` de api.mercadopublico.cl; prefiltro por titulo; detalle completo (descripcion, comprador, items UNSPSC, monto) de 384 candidatos; scoring por taxonomia de servicios inmobiliarios. Umbrales: RM desde UF 500.0, resto del pais desde UF 2000.0. 379 descartes quedan auditables en la hoja 'Descartes' del Excel._
