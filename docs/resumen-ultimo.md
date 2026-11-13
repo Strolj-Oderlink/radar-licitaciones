@@ -1,26 +1,12 @@
 # Licitaciones que calzan — Gamma / Realsa Brokers
 
-**Corrida:** 09-11-2026 23:33 · **UF:** 41,295.46 · **Universo barrido:** 4,901 licitaciones activas en Mercado Publico
+**Corrida:** 13-11-2026 22:18 · **UF:** 41,322.93 · **Universo barrido:** 5,269 licitaciones activas en Mercado Publico
 
-**2 matches** (2 prioridad alta, 0 nuevas). 0 cierran dentro de 7 dias.
+**0 matches** (0 prioridad alta, 0 nuevas). 0 cierran dentro de 7 dias.
 
 ## Prioridad alta
 
-### CONTRATO DE ARRIENDO INMUEBLE PARA PAI-HCM
-`1080623-3-LE26` · HOSPITAL DE MEJILLONES · Región de Antofagasta · LE · cierra 2026-11-12 20:00 (15 dias) · no publicado
-**Tipo de oportunidad:** Estado BUSCA inmueble — El organismo demanda un inmueble en arriendo o compra: oportunidad de colocar una propiedad de cartera o de representar al propietario. Confirmar si las bases admiten a un corredor como oferente o exigen al titular del dominio.  
-**Entidad sugerida:** Realsa Brokers — proceso menor o sin ponderacion fuerte de experiencia  
-**Por que calza (score 66):** objeto/titulo: inmueble (+14) | transaccion: arriendo (+12) | UNSPSC 80131500 (+40)  
-El Hospital de Mejillones requiere realizar el arrendamiento de un inmueble que permita otorgar las atenciones consideradas en la Cartera de Prestaciones dependientes del Programa Ambulatorio Intensivo de Alcohol y Drogas PAI.  
-[Ver en Mercado Publico](https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=1080623-3-LE26)
-
-### CONCESIÓN DE LOCALES COMERCIALES PASEO SAN RAFAEL SEGUNDO LLAMADO
-`552578-51-L126` · I MUNICIPALIDAD DE SAN RAFAEL · Región del Maule · L1 · cierra 2026-10-30 18:00 (22 dias) · no publicado
-**Tipo de oportunidad:** Estado OFRECE inmueble — El organismo vende o concesiona un activo: oportunidad de representar comprador/operador o de asesorar el proceso. Revisar bases y valor minimo.  
-**Entidad sugerida:** Realsa Brokers — proceso menor o sin ponderacion fuerte de experiencia  
-**Por que calza (score 56):** objeto/titulo: locales comerciales (+10) | transaccion/desc: arriendo (+6) | UNSPSC 80131500 (+40)  
-Con la intención de fomentar el desarrollo productivo y la participación local de los emprendedores de la comuna de San Rafael, se abre la convocatoria para entregar en arriendo 8 locales comerciales del espacio llamado ‘‘Paseo San Rafael’’, con la finalidad de que dicha comercialización sea de productos de interés para la comunidad. Según Bases Administrativas. SEGUNDO LLAMADO  
-[Ver en Mercado Publico](https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=552578-51-L126)
+_Sin licitaciones de prioridad alta en esta corrida._
 
 ## Salieron del radar desde la ultima corrida
 
@@ -36,10 +22,10 @@ Con la intención de fomentar el desarrollo productivo y la participación local
 - `867990-62-LE26` CDP 91352 - CC 102 — TASACIÓN DE BIENES INMUEBLES (vista por ultima vez 2026-08-29)
 - `1063538-206-I226` “ARRIENDO DE CELDAS DE MEDIA TENSION MT” (vista por ultima vez 2026-09-26)
 - `2403-71-L126` Servicio de tasación de bienes raíces municipales. (vista por ultima vez 2026-09-30)
+- `552578-51-L126` CONCESIÓN DE LOCALES COMERCIALES PASEO SAN RAFAEL SEGUNDO LLAMADO (vista por ultima vez 2026-11-09)
 - `3621-59-LR26` ADQUISICION COMPRA TERRENO CESFAM COMUNA CABILDO (vista por ultima vez 2026-11-05)
 - `4142-10-LE26` CONTRATACION ARRIENDO INMUEBLE (vista por ultima vez 2026-10-28)
-- `2495-25-LE26` CONTRATO ARRIENDO INMUEBLE RAYEN (vista por ultima vez 2026-11-05)
 
 ---
 
-_Metodo: barrido del endpoint oficial `licitaciones.json?estado=activas` de api.mercadopublico.cl; prefiltro por titulo; detalle completo (descripcion, comprador, items UNSPSC, monto) de 384 candidatos; scoring por taxonomia de servicios inmobiliarios. Umbrales: RM desde UF 500.0, resto del pais desde UF 2000.0. 379 descartes quedan auditables en la hoja 'Descartes' del Excel._
+_Metodo: barrido del endpoint oficial `licitaciones.json?estado=activas` de api.mercadopublico.cl; prefiltro por titulo; detalle completo (descripcion, comprador, items UNSPSC, monto) de 399 candidatos; scoring por taxonomia de servicios inmobiliarios. Umbrales: RM desde UF 500.0, resto del pais desde UF 2000.0. 396 descartes quedan auditables en la hoja 'Descartes' del Excel._
