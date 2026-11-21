@@ -1,6 +1,6 @@
 # Licitaciones que calzan — Gamma / Realsa Brokers
 
-**Corrida:** 17-11-2026 23:42 · **UF:** 41,350.42 · **Universo barrido:** 4,949 licitaciones activas en Mercado Publico
+**Corrida:** 21-11-2026 21:56 · **UF:** 41,377.93 · **Universo barrido:** 5,181 licitaciones activas en Mercado Publico
 
 **0 matches** (0 prioridad alta, 0 nuevas). 0 cierran dentro de 7 dias.
 
