@@ -178,5 +178,35 @@
   "monto_uf": null,
   "nombre": "CONTRATO DE ARRIENDO INMUEBLE PARA PAI-HCM",
   "entidad": "Realsa Brokers"
+ },
+ "2432-44-L126": {
+  "primera_vista": "2026-11-26",
+  "ultima_vista": "2026-11-26",
+  "score": 91,
+  "estado": "Publicada",
+  "cierre": "2026-12-01 18:00",
+  "monto_uf": null,
+  "nombre": "Sol. 598 - Servicio de tasación -Secpla",
+  "entidad": "Realsa Brokers"
+ },
+ "2760-144-LE26": {
+  "primera_vista": "2026-11-26",
+  "ultima_vista": "2026-11-26",
+  "score": 66,
+  "estado": "Publicada",
+  "cierre": "2026-12-04 15:00",
+  "monto_uf": null,
+  "nombre": "ARRIENDO DE INMUEBLE PARA JUZGADO POLICIA LOCAL",
+  "entidad": "Realsa Brokers"
+ },
+ "2760-145-LP26": {
+  "primera_vista": "2026-11-26",
+  "ultima_vista": "2026-11-26",
+  "score": 66,
+  "estado": "Publicada",
+  "cierre": "2026-12-07 15:00",
+  "monto_uf": null,
+  "nombre": "ARRIENDO DE INMUEBLE PARA FUNCIONAMIENTO DE LA PDI",
+  "entidad": "Gamma"
  }
 }

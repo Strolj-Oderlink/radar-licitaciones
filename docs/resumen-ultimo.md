@@ -1,12 +1,38 @@
 # Licitaciones que calzan — Gamma / Realsa Brokers
 
-**Corrida:** 21-11-2026 21:56 · **UF:** 41,377.93 · **Universo barrido:** 5,181 licitaciones activas en Mercado Publico
+**Corrida:** 26-11-2026 00:44 · **UF:** 41,405.45 · **Universo barrido:** 4,891 licitaciones activas en Mercado Publico
 
-**0 matches** (0 prioridad alta, 0 nuevas). 0 cierran dentro de 7 dias.
+**3 matches** (3 prioridad alta, 3 nuevas). 1 cierran dentro de 7 dias.
+
+## Accionables esta semana (cierre <= 7 dias)
+
+- **6d** · `2432-44-L126` · **Sol. 598 - Servicio de tasación -Secpla** — I MUNICIPALIDAD ESTACION CENTRAL (Región Metropolitana de Santiago). no publicado. → *Realsa Brokers*. [Ficha](https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2432-44-L126)
 
 ## Prioridad alta
 
-_Sin licitaciones de prioridad alta en esta corrida._
+### Sol. 598 - Servicio de tasación -Secpla
+`2432-44-L126` · I MUNICIPALIDAD ESTACION CENTRAL · Región Metropolitana de Santiago · L1 · cierra 2026-12-01 18:00 (6 dias) · no publicado
+**Tipo de oportunidad:** Estado OFRECE inmueble — El organismo vende o concesiona un activo: oportunidad de representar comprador/operador o de asesorar el proceso. Revisar bases y valor minimo.  
+**Entidad sugerida:** Realsa Brokers — proceso menor o sin ponderacion fuerte de experiencia  
+**Por que calza (score 91):** nucleo/titulo: tasacion (+24) | nucleo/desc: tasaciones (+14) | objeto/desc: inmueble (+7) | transaccion/desc: arriendo (+6) | UNSPSC 80131800 (+40)  
+Contar con diferentes tasaciones profesionales permitirá a la Municipalidad evaluar con precisión el costo real de los bienes inmuebles, facilitando la toma de decisiones informadas respecto de su adquisición, enajenación o arriendo.  
+[Ver en Mercado Publico](https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2432-44-L126)
+
+### ARRIENDO DE INMUEBLE PARA JUZGADO POLICIA LOCAL
+`2760-144-LE26` · I MUNICIPALIDAD DE CORONEL · Región del Biobío · LE · cierra 2026-12-04 15:00 (9 dias) · no publicado
+**Tipo de oportunidad:** Estado BUSCA inmueble — El organismo demanda un inmueble en arriendo o compra: oportunidad de colocar una propiedad de cartera o de representar al propietario. Confirmar si las bases admiten a un corredor como oferente o exigen al titular del dominio.  
+**Entidad sugerida:** Realsa Brokers — proceso menor o sin ponderacion fuerte de experiencia  
+**Por que calza (score 66):** objeto/titulo: inmueble (+14) | transaccion: arriendo (+12) | UNSPSC 80131500 (+40)  
+ARRIENDO DE INMUEBLE PARA JUZGADO POLICIA LOCAL DE CORONEL  
+[Ver en Mercado Publico](https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2760-144-LE26)
+
+### ARRIENDO DE INMUEBLE PARA FUNCIONAMIENTO DE LA PDI
+`2760-145-LP26` · I MUNICIPALIDAD DE CORONEL · Región del Biobío · LP · cierra 2026-12-07 15:00 (12 dias) · no publicado
+**Tipo de oportunidad:** Estado BUSCA inmueble — El organismo demanda un inmueble en arriendo o compra: oportunidad de colocar una propiedad de cartera o de representar al propietario. Confirmar si las bases admiten a un corredor como oferente o exigen al titular del dominio.  
+**Entidad sugerida:** Gamma — exige/pondera experiencia acreditable o es licitacion mayor  
+**Por que calza (score 66):** objeto/titulo: inmueble (+14) | transaccion: arriendo (+12) | UNSPSC 80131500 (+40)  
+ARRIENDO DE INMUEBLE PARA FUNCIONAMIENTO DE LA POLICIA DE INVESTIGACIONES DE CHILE, CORONEL.  
+[Ver en Mercado Publico](https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=2760-145-LP26)
 
 ## Salieron del radar desde la ultima corrida
 
@@ -28,4 +54,4 @@ _Sin licitaciones de prioridad alta en esta corrida._
 
 ---
 
-_Metodo: barrido del endpoint oficial `licitaciones.json?estado=activas` de api.mercadopublico.cl; prefiltro por titulo; detalle completo (descripcion, comprador, items UNSPSC, monto) de 400 candidatos; scoring por taxonomia de servicios inmobiliarios. Umbrales: RM desde UF 500.0, resto del pais desde UF 2000.0. 397 descartes quedan auditables en la hoja 'Descartes' del Excel._
+_Metodo: barrido del endpoint oficial `licitaciones.json?estado=activas` de api.mercadopublico.cl; prefiltro por titulo; detalle completo (descripcion, comprador, items UNSPSC, monto) de 397 candidatos; scoring por taxonomia de servicios inmobiliarios. Umbrales: RM desde UF 500.0, resto del pais desde UF 2000.0. 391 descartes quedan auditables en la hoja 'Descartes' del Excel._
